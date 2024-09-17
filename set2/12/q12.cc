@@ -12,16 +12,14 @@ int main(int argc, char *argv[])
     string binary = "";
 
     for (
-            int i = 1;
+            size_t i = 1;
             i != BITS;
             i++
     )
     {
         if( (value >> (BITS - i)) & 1 )
-            //cout << '1';
             binary.append("1");
         else
-            //cout << '0';
             binary.append("0");
     }
 
@@ -34,7 +32,7 @@ int main(int argc, char *argv[])
         cout << pow(-2, BITS - 1);
         firstSetBitHandled = true;
     }
-    for(int i = 2; i != BITS; i++)
+    for(size_t i = 2; i != BITS; i++)
     {
     
         if ( (binary[i - 1] == '1') && firstSetBitHandled)
