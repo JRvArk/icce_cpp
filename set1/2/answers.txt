@@ -14,8 +14,9 @@ the source files, which are then compiled into object files. These are then
 used to link with libraries to then create the final executable.
 
 4. Is a library an object module?
-A library can be seen as a collection of object modules, which can be used to
-avoid recompilation of the same code. So yes, a library is an object module.
+A library is a collection of object modules which can be used to avoid 
+recompilation of the same code, so a library is not an object module but a
+collection of them.
 
 5. Why is an object file not necessarily an executable program?
 This object file is not yet linked with any external libraries which most often
