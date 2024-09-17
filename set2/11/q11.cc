@@ -7,11 +7,21 @@ int main()
 {
     string inputText;
     while (getline(cin, inputText));
-        if (inputText.length() <= 72)
+        size_t inputTextLength = inputText.length();
+        if (inputTextLength <= 72)
             cout << inputText << '\n';
-        else if (inputText.length() > 72)
+        else if (inputTextLength > 72)
         {
-            
+            for (int i = 0, j = 1; i <= inputTextLength / 72; i++)
+            {   
+                do
+                {
+                    cout << inputText[j - 1];
+                    j++;
+                }
+                while (j % 72 && j < inputTextLength);
+                cout << '\n';
+            }
         }
         
 }
