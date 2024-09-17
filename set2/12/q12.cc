@@ -4,14 +4,13 @@
 
 using namespace std;
 
-#define BITS (sizeof(long) * 8)
+#define BITS (sizeof(int) * 8)
 
 int main(int argc, char *argv[])
 {
-    char* end;
-    long value = strtol(argv[1], &end, 10);
+    int value = stoi(argv[1]);
+    string binary = "";
 
-    cout << value << " = ";
     for (
             int i = 1;
             i != BITS;
@@ -19,17 +18,33 @@ int main(int argc, char *argv[])
     )
     {
         if( (value >> (BITS - i)) & 1 )
-            cout << '1';
+            //cout << '1';
+            binary.append("1");
         else
-            cout << '0';
+            //cout << '0';
+            binary.append("0");
     }
 
-    cout << " = ";
+    cout << value << " = ";
+    cout << binary << " = ";
 
-    for(int i = 1; i != BITS; --i)
+    bool firstSetBitHandled = false;
+    if (binary[0] == '1')
     {
-        if( (value >> (BITS - i)) & 1)
-            cout << 
+        cout << pow(-2, BITS - 1);
+        firstSetBitHandled = true;
     }
-
+    for(int i = 2; i != BITS; i++)
+    {
+    
+        if ( (binary[i - 1] == '1') && firstSetBitHandled)
+            cout << " + " << pow(2, BITS - i);
+        else
+            if (binary[i - 1] == '1')
+            {
+                cout << pow(2, BITS - i);
+                firstSetBitHandled = true;
+            }
+    }
+    cout << '\n';
 }
