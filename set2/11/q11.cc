@@ -12,7 +12,7 @@ int main()
             cout << inputText << '\n';
         else if (inputTextLength > 72)
         {
-            for (int i = 0, j = 1; i <= inputTextLength / 72; i++)
+            for (size_t i = 0, j = 1; i <= inputTextLength / 72; i++)
             {   
                 do
                 {
