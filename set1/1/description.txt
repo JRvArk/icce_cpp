@@ -1,6 +1,6 @@
 We used the following commands to compile and link the program:
     g++ -Wall -Werr -std=c++26 -c hello.cc -o hello.o
-    g++ -Wall -Werr -std=c++26 -s hello.o -o hello
+    g++ hello.o -o hello -s
     ./hello > out.txt
 
 The object file is a file that has been compiled from c code to assembly 
