@@ -23,9 +23,11 @@ union ValueUnion
     BitField bitField;
 };
 
+constexpr ValueUnion valueUnion = { // Set the bitField values at compile time.
+    .bitField = {0, 7, 15, 10, 6, 7, 15, 15, 7, 0, 3}
+};
+
 int main()
-{                                   // sets bit-field values and outputs the 
-                                    // value in hex.
-    cout << hex << ValueUnion {.bitField = 
-            {0, 7, 15, 10, 6, 7, 15, 15, 7, 0, 3} }.value << '\n';
+{                                   // Display value in hex.
+    cout << hex << valueUnion.value << '\n';
 }
