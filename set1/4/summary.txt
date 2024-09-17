@@ -1,0 +1,2 @@
+To transform multiple NTBSs into one RSL and provide a rule 
+when a delimiter needs to be used.

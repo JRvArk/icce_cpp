@@ -1,0 +1,2 @@
+To provide six different ways of checking whether an inputted
+value is even or odd.

@@ -1,0 +1,2 @@
+To write a program that initialises a size_t value field
+using a bit-fields struct and a union.

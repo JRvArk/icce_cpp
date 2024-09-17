@@ -1,0 +1,4 @@
+This question’s purpose is to show that we have a working (understanding
+of) the compiler. We are first asked to construct a program that prints 
+hello world, and are then asked to construct the separate files and 
+provide its sizes.

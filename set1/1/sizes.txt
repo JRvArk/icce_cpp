@@ -1,0 +1,9 @@
+To find the file sizes, the following commands are used:
+    ls -l
+    locate iostream
+    ls -l /opt/homebrew/Cellar/gcc/14.1.0.2/include/c++/14/iostream
+This gives the size of the following files:
+    hello.cc:    67 bytes
+    hello.o:     6592 bytes
+    hello:       14528 bytes
+    iostream:    3074 bytes

@@ -1,0 +1,14 @@
+To provide six additional aspects of C++ compared to C.
+
+1.  In C++ object-oriented programming is possible, enabling the use of
+    objects and classes.
+2.  C++ offers namespaces, that can be used to avoid collisions between
+    identifiers, mostly useful across large programs / libraries.
+3.  C++ has exception handling where try, catch, and throw can be used to handle
+    errors within the program.
+4.  C++ introduces overloading of functions, allowing multiple functions with
+    one name but different parameters.
+5.  C++ supports templates, where functions and classes can operate on different
+    data types without having duplicated code.
+6.  C++ has references, which are more intuitive and safer than the pointers C
+    uses to achieve similar functionality.

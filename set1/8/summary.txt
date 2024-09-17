@@ -1,0 +1,3 @@
+To learn to use command line arguments by making a program that
+prints a combination of hello and other text based on provided
+command line arguments.

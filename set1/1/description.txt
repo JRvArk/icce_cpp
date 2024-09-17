@@ -1,0 +1,9 @@
+We used the following commands to compile and link the program:
+    g++ -Wall -Werr -std=c++26 -c hello.cc -o hello.o
+    g++ -Wall -Werr -std=c++26 -s hello.o -o hello
+    ./hello > out.txt
+
+The object file is a file that has been compiled from c code to assembly 
+code before it is in turn converted into machine code. Next, it is linked with other object 
+code files, such as that for iostream, and an executable program is created 
+that can be run, which will output the following text: Hello World

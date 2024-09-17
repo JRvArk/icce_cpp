@@ -1,0 +1,1 @@
+To explain the concepts of piping and redirection.

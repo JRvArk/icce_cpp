@@ -1,0 +1,7 @@
+Redirection is used to redirect the input from a file instead of the standard 
+input stream (in the example the file in), or to redirect the output of 
+program to a file out instead of the standard output stream.
+
+Piping gives the output of the first command to the command after the piping
+operator. Here, the output of program is given to the command less, which
+prints the output one screen at a time.

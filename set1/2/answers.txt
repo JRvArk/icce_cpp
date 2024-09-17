@@ -1,0 +1,22 @@
+1. What is the difference between a C++ declaration and definition?
+A declaration of a variable or function tells the compiler what a name refers
+to, and tells its type. A definition does the same, but also provides memory 
+in case of a variable, or provides functionality in case of a function.
+
+2. What are header files used for?
+Header files are used to separate declarations and definitions, and thus 
+constants, functions and classes can be declared and used over multiple source 
+files.
+
+3. In what part of creating a program uses the compiler header and libraries?
+When a program is compiled, the header files are used first to be included in
+the source files, which are then compiled into object files. These are then 
+used to link with libraries to then create the final executable.
+
+4. Is a library an object module?
+A library can be seen as a collection of object modules, which can be used to
+avoid recompilation of the same code. So yes, a library is an object module.
+
+5. Why is an object file not necessarily an executable program?
+This object file is not yet linked with any external libraries which most often
+are used. Therefore, the compiled object file is not yet an executable.
