@@ -1,0 +1,3 @@
+The R"(...)" form cannot be used when dealing with conflicting or nested
+delimiters, such as in this case. Therefore we use the R"RSL(...)RSL" form to
+avoid conflict within the string.
