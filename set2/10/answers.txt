@@ -1,0 +1,28 @@
+1. Describe how the compiler interprets the statement.
+    Firstly the compiler will test the first condition (first == test1). When
+    the condition is met, then the rest of the statement will be executed. So
+    if the second condition (second == test2) is true, 5 will be assigned to 
+    value, if the second condition is false, then 6 will be assigned to value.
+    If the first condition is false then value will not have anything assigned
+    within the given statement.
+2. Rewrite this statement using the correct layout.
+    if(first == test1)
+        if(second == test2)
+            value = 5;
+        else
+            value = 6;
+3. How would you change it so the 'non-default' interpretation is used?
+    We can use and to make this happen:
+    if(first == test1 and second == test2) value = 5; else value = 6;
+4. Describe how your changed statement is interpreted.
+    The first condition is tested, and if true then value will become 5. This is
+    the case if both the first and second condition of the given statement are
+    true. If one or both are false, then value will become 6.
+5. What is a flaw in the formulation of the statement, apart of layout?
+    The given statement is ambiguous and can be misinterpreted. This can lead to
+    mistakes. This can be fixed by using the following statement:
+        if (first == test1 and second == test2) 
+            value = 5; 
+        else if (first == test1) 
+            value = 6;
+    This statement should not lead to any ambiguity.
