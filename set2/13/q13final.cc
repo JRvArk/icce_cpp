@@ -13,11 +13,16 @@ int main(int argc, char *argv[])
                                     // Add only the value of the char to sum.
             sum += value[idx] - '0';
         if (sum == 3 or sum == 6 or sum == 9)
+        {
             cout << "divisible by 3\n";
+            return 0;
+        }
         else
             value = to_string(sum);
-    }                               // Also test for edge case that value is 0.
-    if(value % 3 == 0 and value != 0)
+    }
+    size_t digit = value[0] - '0';
+                                    // Also test for edge case that value is 0.
+    if(digit % 3 == 0 and digit != 0)
         cout << "divisible by 3\n";
     else
         cout << "not divisible by 3\n";

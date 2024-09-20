@@ -27,10 +27,10 @@ int main(int argc, char *argv[])
         cout << pow(-2, BITS - 1);
         firstSetBitHandled = true;
     }
-    for(size_t idx = 2; idx != BITS; i++)
+    for(size_t idx = 2; idx != BITS; ++idx)
     {                               // Only check for 1's as these have values.
         if ( (binary[idx - 1] == '1') && firstSetBitHandled)
-            cout << " + " << pow(2, BITS - i);
+            cout << " + " << pow(2, BITS - idx);
         else
             if (binary[idx - 1] == '1')
             {
