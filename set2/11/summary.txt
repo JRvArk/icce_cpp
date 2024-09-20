@@ -1,2 +1,2 @@
-This exercises asks to process lines such that lines longer than
-80 characters are separated over multiple lines.
+In this exercise, input is being processed and split up to multiple lines when
+necessary to be a reasonable length.

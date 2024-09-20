@@ -13,22 +13,23 @@ int main(int argc, char *argv[])
     if (argc == 3)
     {
         string arg2 = argv[2];
+                                    // Check for the random option (r).
         if (arg2.find("r") != string::npos)
             srandom(time(0));
         else
             srandom(0);
 
-        
+                                    // Check for the verbose option.
         if (arg2.find("v") != string::npos)
             verbose = true;
     }
 
     size_t hits = 0;
-    for (size_t i = 0; i != nrSims; i++)
+                                    // Run the simulation for nrSims times.
+    for (size_t sim = 0; sim < nrSims; ++sim)
     {
         size_t selected = random() % 3;
-        size_t prize= random() % 3;
-
+        size_t prize = random() % 3;
         size_t opened;
         do
         {
@@ -41,7 +42,7 @@ int main(int argc, char *argv[])
         if (suggested == prize)
             ++hits;
 
-        if (verbose)
+        if (verbose)                // Print all info when verbose is selected. 
         {
             cout << "selected: " << selected
                  << ", prize behind: " << prize

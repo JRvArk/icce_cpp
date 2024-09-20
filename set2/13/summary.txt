@@ -1,2 +1,2 @@
-To write a program that check whether a (very large) number is
-divisible by three.
+To write a program that checks whether a (very large) number is divisible by 
+three.

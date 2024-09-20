@@ -1,2 +1,2 @@
-Creating a program producing a multiplication table.
-
+In the following program, we produce the multiplication using an argument given
+when calling the program from the command line.
