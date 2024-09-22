@@ -1,1 +1,2 @@
-To create a multiplication table.
+Creating a program producing a multiplication table.
+

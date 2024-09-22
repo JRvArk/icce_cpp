@@ -4,17 +4,17 @@ using namespace std;
 
 struct BitField	                    // Declares a bit-field struct that 
 {                                   // adheres to the given constraints.
-    uint32_t bit0:   1;
-    uint32_t field0: 3;
-    uint32_t field1: 4;
-    uint32_t field2: 5;
-    uint32_t field3: 4;
-    uint32_t field4: 4;
-    uint32_t field5: 4;
-    uint32_t field6: 4;
-    uint32_t field7: 4;
-    uint32_t field8: 5;
-    uint32_t field9: 2;
+    size_t bit0:   1;
+    size_t field0: 3;
+    size_t field1: 4;
+    size_t field2: 5;
+    size_t field3: 4;
+    size_t field4: 4;
+    size_t field5: 4;
+    size_t field6: 4;
+    size_t field7: 4;
+    size_t field8: 5;
+    size_t field9: 2;
 };
 
 union ValueUnion
