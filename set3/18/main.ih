@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+struct returnValues {
+    bool ok;
+    size_t nr;
+    string value;
+};
+
+returnValues combine(int argc, char *argv[]);
+
+bool structCall(int argc, char *argv[]);
+
+void boundCall(int argc, char *argv[]);
+
+void usageMsg();
+
+bool printCall(bool ok, size_t nr, string value);
