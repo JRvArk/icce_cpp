@@ -1,5 +1,5 @@
-#include <iostream>
-
+#include <iostream> 
+// TODO: Split functions up so we main.cc and fib.cc files
 using namespace std;
 
 enum
