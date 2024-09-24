@@ -1,5 +1,7 @@
 #ifndef FIB_H
-#def FIB_H
+#define FIB_H
+
+#include <cstddef>
 
 enum
 {
