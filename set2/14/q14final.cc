@@ -15,9 +15,9 @@ int main(int argc, char *argv[])
         cout << comb + 1 << ": ";   // Display the numbered line.
 
         for (size_t idx = 0; idx != (argc - 1); ++idx)
-        {                       // Use bitwise AND to check whether argv at
-                                // idx has to be displayed in the 
-                                // combination.
+        {                           // Use bitwise AND to check whether argv at
+                                    // idx has to be displayed in the 
+                                    // combination.
             if (comb & (1 << idx))
                 cout << argv[idx] << " ";
         }
