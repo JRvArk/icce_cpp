@@ -1,8 +1,7 @@
 #include "main.ih"
 
-                                        // Checks whether the command line
-                                        // arguments provided contains a
-                                        // double value.
+                                    // Checks whether the command line arguments 
+                                    // provided contains a double value.
 bool hasDoubleArgument(int argc, char **argv)
 {
     for (size_t idx = 1; idx != argc; ++idx)
