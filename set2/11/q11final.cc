@@ -25,12 +25,18 @@ int main()
                     cout << inputText << '\n';
                     break; 
                 }                   // Print to last space-char before BREAKLINE
-                for (size_t idx = BREAKLINE - 1; idx > 0; --idx)
+                for (size_t idx = BREAKLINE; idx > 0; --idx)
                 {
                     if (isspace(inputText[idx]))
                     {
                         cout << inputText.substr(0, idx) << '\n';
+                                    // Get the idx at which a non-space-char
+                                    // starts.
+                        while (isspace(inputText[idx]))
+                            ++idx;
+                                    // Remove idx chars from inputText.
                         inputText = inputText.substr(idx);
+                        break;
                     }
                 }
             }
