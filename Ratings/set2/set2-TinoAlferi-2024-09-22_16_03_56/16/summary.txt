@@ -1,0 +1,1 @@
+This exercise learns us to program a simulation of the Monty Hall problem.

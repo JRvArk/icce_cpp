@@ -1,0 +1,1 @@
+To design a program that shows all combinations of its command line arguments.
