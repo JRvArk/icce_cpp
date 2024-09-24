@@ -37,5 +37,5 @@ int main(int argc, char *argv[])
         }
         bitValue = 0;                             // reset bit value 
     }
-    cout << valueCopy << " = " << bits << " = " << bitValues << "\n";
+    cout << valueCopy << " = " << bits << " = " << bitValues << '\n';
 }
