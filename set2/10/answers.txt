@@ -18,9 +18,7 @@
     the case if both the first and second condition of the given statement are
     true. If one or both are false, then value will become 6.
 5. What is a flaw in the formulation of the statement, apart of layout?
-    Apart from the fact that the statement might be ambiguous the way it is
-    presented, we can change the formulation of the statement to contain only a
-    single if-statement, by using a ternary conditional operator. Therefore the
-    statement can be implemented as follows:
-        if (first == test1)
-            value = (second == test2) ? 5 : 6;
+    The given statement can be improved by using a ternary conditional operator,
+    following the FLOW abbreviation. Then we'd have:
+    if (first == test1)
+        value = (second == test2) ? 5 : 6;
