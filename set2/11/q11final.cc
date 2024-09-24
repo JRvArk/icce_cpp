@@ -3,23 +3,36 @@
 
 using namespace std;
 
+enum {
+    MAXLINE = 80,                   // Max line length that is accepted.
+                                    // Break lines up after this many chars at
+    BREAKLINE = 72                  // prior space or a tab.
+};
+
 int main()
 {
     string inputText;
     while (getline(cin, inputText))
-    {
-        size_t inputTextLength = inputText.length();
-        if (inputTextLength < 80)   // Lines below 80 chars in length are fine.
+    {                               // Length is under MAXLINE so display it.
+        if (inputText.length() < MAXLINE)
             cout << inputText << '\n';
         else
-        {
-            size_t idx = 0;
-            while(idx <= inputTextLength)
-                                    // Test for spaces or tabs at idx after 72
-            {                       // characters at each iteration.
-                while(!isspace(inputText[idx]) || idx % 72 <= 71)
-                    cout << inputText[idx++];
-                cout << '\n';
+        {                           // Continue until all of input is processed.
+            while (inputText.length() > 0)
+            {                       // If-statement for last part of input.
+                if (inputText.length() <= BREAKLINE)
+                {
+                    cout << inputText << '\n';
+                    break; 
+                }                   // Print to last space-char before BREAKLINE
+                for (size_t idx = BREAKLINE - 1; idx > 0; --idx)
+                {
+                    if (isspace(inputText[idx]))
+                    {
+                        cout << inputText.substr(0, idx) << '\n';
+                        inputText = inputText.substr(idx);
+                    }
+                }
             }
         }
     }      
