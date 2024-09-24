@@ -1,5 +1,9 @@
-intro.txt
+txt/intro.txt
+fib/fib.h
+fib/fib.ih
+fib/fib.cc
+main.ih
 main.cc
-timing41.txt
-timing41x.txt
-beyond37.txt
+txt/timing41.txt
+txt/timing41x.txt
+txt/beyond37.txt
