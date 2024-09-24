@@ -20,5 +20,5 @@
 5. What is a flaw in the formulation of the statement, apart of layout?
     The given statement can be improved by using a ternary operator, following
     the FLOW abbreviation. Then we'd have:
-        if (first == test1)
-            value = (second == test2 ? 5 : 6)
+    if (first == test1)
+        value = (second == test2) ? 5 : 6;
