@@ -1,0 +1,3 @@
+This exercise is about learning to use if-statements.
+The following statement is considered in the exercise:
+    if (first == test1) if (second == test2) value = 5; else value = 6;
