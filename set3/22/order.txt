@@ -4,6 +4,6 @@ fib/fib.ih
 fib/fib.cc
 main.ih
 main.cc
-txt/timing41.txt
 txt/timing41x.txt
+txt/timing41.txt
 txt/beyond37.txt
