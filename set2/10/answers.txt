@@ -18,13 +18,9 @@
     the case if both the first and second condition of the given statement are
     true. If one or both are false, then value will become 6.
 5. What is a flaw in the formulation of the statement, apart of layout?
-    The given statement is ambiguous and can be misinterpreted. This can lead to
-    mistakes. This can be fixed by using the following statement:
-        if (first == test1 and second == test2) 
-            value = 5; 
-        else if (first == test1) 
-            value = 6;
-    This statement should not lead to any ambiguity.
-JB: I don't agree that the statement is ambiguous. Perhaps confusing, but
-JB: not ambiguous: the compiler's behavior is well-defined.
-JB: Your change repeats the condition, and still repeats the 'value =' code.
+    Apart from the fact that the statement might be ambiguous the way it is
+    presented, we can change the formulation of the statement to contain only a
+    single if-statement, by using a ternary conditional operator. Therefore the
+    statement can be implemented as follows:
+        if (first == test1)
+            value = (second == test2) ? 5 : 6;
