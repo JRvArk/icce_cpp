@@ -14,7 +14,7 @@ int main(int argc, char **argv)
                                      argc < 4 ? 0 : stoul(argv[3])); 
          offset == string::npos
      )
-         cout << "not found\n";
+         cout << "not found" << '\n';
      else
          cout << "found at offset " << offset << '\n';
 }
