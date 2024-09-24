@@ -5,8 +5,8 @@ using namespace std;
 
 enum Length 
 {
-    directPrint = 79, // lines *shorter than* 80 will be printed directly
-    brokenLine = 72,  // lines longer than 79 will be broken at first
+    DIRECTPRINT = 79, // lines *shorter than* 80 will be printed directly
+    LINEBREAK = 72,   // lines longer than 79 will be broken at first
                       // space/tab char after 72
 };
 
@@ -19,17 +19,19 @@ int main()
        size_t idx = 0;
        while (idx < lineLength) 
        {
-            if (lineLength - idx <= Length::directPrint)
+            if (lineLength - idx <= Length::DIRECTPRINT)
             {                                             // If shorter than
                 cout << line.substr(idx) << '\n';         // 80 print directly
                 break;                                    // and break to get 
             }                                             // next link
             else
             {   
-                size_t startPos = idx;          // select start position       
-                idx += 72;                      // of to be broken string
-                                                // and add 72 to idx to start
-                                                // searching for space there
+                size_t startPos = idx;               
+                idx += Length::LINEBREAK;       // adjust idx to start
+                                                // searching for space after
+                                                // breakpoint (which exists
+                                                // here due to condition above)
+                                                
                 while(!isspace(line[idx]))
                     ++idx;
                                                 // idx - startPos denotes

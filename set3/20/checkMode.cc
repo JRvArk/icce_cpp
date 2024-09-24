@@ -3,8 +3,9 @@
 
 ArgumentStruct checkMode(string arg)
 {
-    ArgumentStruct argumentStruct;
+    ArgumentStruct argumentStruct; ## replace to Enum
 
+    switch(arg)...
     if (arg == "-c")
         argumentStruct.charArg = true;
     else if (arg == "-w")

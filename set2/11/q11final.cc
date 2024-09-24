@@ -24,8 +24,8 @@ int main()
                 {
                     cout << inputText << '\n';
                     break; 
-                }                   // Print to last space-char before BREAKLINE
-                for (size_t idx = BREAKLINE; idx > 0; --idx)
+                }                   // Print to last space-char after BREAKLINE
+                for (size_t idx = BREAKLINE; ; ++idx)
                 {
                     if (isspace(inputText[idx]))
                     {
