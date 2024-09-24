@@ -1,24 +1,18 @@
-//JB: ?
 1. Describe how the compiler interprets the statement.
-    Firstly the compiler will test the first condition (first == test1). When
-    JB: The compiler never tests the condition. The compiler (at compile time)
-    JB: produces code, the running of which (at run time, which may be a
-    JB: decade later) evaluates the condition.
-    the condition is met, then the rest of the statement will be executed. So
-    if the second condition (second == test2) is true, 5 will be assigned to 
-    value, if the second condition is false, then 6 will be assigned to value.
-    If the first condition is false then value will not have anything assigned
-    within the given statement.
+    We have two if-statements and one else-statement in the full statement. The
+    compiler interprets the code such that the else-statement will belong to the
+    closest preceding if-statement, which is the second one. The assignment of 5
+    to value will belong to the second if-statement, and the assignment of 6 to
+    value will belong to the else-statement.
 2. Rewrite this statement using the correct layout.
-    if(first == test1)
-        if(second == test2)
+    if (first == test1)
+        if (second == test2)
             value = 5;
         else
             value = 6;
 3. How would you change it so the 'non-default' interpretation is used?
     We can use and to make this happen:
-    //JB: BAK
-    if(first == test1 and second == test2) value = 5; else value = 6;
+    if (first == test1 and second == test2) value = 5; else value = 6;
 4. Describe how your changed statement is interpreted.
     The first condition is tested, and if true then value will become 5. This is
     the case if both the first and second condition of the given statement are
