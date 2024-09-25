@@ -16,7 +16,7 @@ int main()
     for (size_t depth = 4; depth --> 2 ;)
     {
         indent_less();
-        indented_cout() << "back a step\n"
+        indented_cout() << "back a step\n";
     }
     
     reset_indentation();
