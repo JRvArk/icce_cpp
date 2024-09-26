@@ -34,15 +34,61 @@ Each sample counts as 0.01 seconds.
  18.06      1.26     0.54                             fun(std::__cxx11::basic_string<char,    
                                                       std::char_traits<char>, 
                                                       std::allocator<char> >)
+
  11.37      1.60     0.34                             fun2(std::__cxx11::basic_string<char, 
                                                       std::char_traits<char>, 
                                                       std::allocator<char> > const&)
+
  1.00      2.67     0.03                           callValue(std::__cxx11::basic_string<char, 
                                                       std::char_traits<char>, 
                                                       std::allocator<char> > const&)
 
+for some unknown reason callRef does not appear when profiling the program built with -O1
 
 
 The -O3 flag tells the compiler to optimize the code for speed at the cost of memory 
 efficiency. It does all the -O2 optimizations and more, which greatly increases compilation time.
 
+profiling results for -O3 flag:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total
+ time   seconds   seconds    calls  Ts/call  Ts/call  name
+12.15      1.06     0.39                              fun(std::__cxx11::basic_string<char, 
+                                                      std::char_traits<char>, 
+                                                      std::allocator<char> >)
+
+ 11.84      1.45     0.38                             fun2(std::__cxx11::basic_string<char,  
+                                                      std::char_traits<char>, 
+                                                      std::allocator<char> > const&)
+
+2.34      2.62     0.07                            callValue(std::__cxx11::basic_string<char, 
+                                                      std::char_traits<char>, 
+                                                      std::allocator<char> > const&)
+
+0.93      3.06     0.03                              callRef(std::__cxx11::basic_string<char, 
+                                                      std::char_traits<char>, 
+                                                      std::allocator<char> > const&)
+
+
+profiling results without any -O flags:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total
+ time   seconds   seconds    calls  Ts/call  Ts/call  name
+
+ 13.80      1.00     0.45                             fun2(std::__cxx11::basic_string<char, 
+                                                      std::char_traits<char>, 
+                                                      std::allocator<char> > const&)
+
+  9.82      1.32     0.32                             fun(std::__cxx11::basic_string<char, 
+                                                      std::char_traits<char>, 
+                                                      std::allocator<char> >)
+
+  2.45      2.46     0.08                          callValue(std::__cxx11::basic_string<char, 
+                                                      std::char_traits<char>, 
+                                                      std::allocator<char> > const
+
+  0.31      3.23     0.01                            callRef(std::__cxx11::basic_string<char, 
+                                                      std::char_traits<char>, 
+                                                      std::allocator<char> > const&)
