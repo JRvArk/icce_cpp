@@ -1,0 +1,3 @@
+The -O2 flag turns on a certain number of optimization that the compiler does to make
+the code take up less space and run faster. These are all the optimizations that do
+not make the program take up more space to run faster. 
