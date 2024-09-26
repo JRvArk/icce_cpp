@@ -2,8 +2,47 @@ The -O2 flag tells the compiler to do optimizations on the code, does all the op
 make the code smaller and run faster without making it take more space during execution. This
 comes at the cost of a longer compilation time. 
 
+profiling results for -O2 flag:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total
+ time   seconds   seconds    calls  Ts/call  Ts/call  name
+14.43      1.15     0.43                             fun(std::__cxx11::basic_string<char,   
+                                                     std::char_traits<char>, 
+                                                     std::allocator<char> >)
+
+ 10.74      1.47     0.32                            fun2(std::__cxx11::basic_string<char,
+                                                     std::char_traits<char>, 
+                                                     std::allocator<char> > const&)
+
+  1.68      2.46     0.05                          callValue(std::__cxx11::basic_string<char, 
+                                                    std::char_traits<char>,       
+                                                     std::allocator<char> > const&)
+
+  0.34      2.94     0.01                            callRef(std::__cxx11::basic_string<char,
+                                                     std::char_traits<char>, 
+                                                     std::allocator<char> > const&)
+
 The -O1 flag tells the compiler to optimize the code but to a lesser degree than -O2. This
 flags only makes the compiler do optimizations that minimally impact compilation time. 
 
+profiling results for -O1 flag:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total
+ time   seconds   seconds    calls  Ts/call  Ts/call  name
+ 18.06      1.26     0.54                             fun(std::__cxx11::basic_string<char,    
+                                                      std::char_traits<char>, 
+                                                      std::allocator<char> >)
+ 11.37      1.60     0.34                             fun2(std::__cxx11::basic_string<char, 
+                                                      std::char_traits<char>, 
+                                                      std::allocator<char> > const&)
+ 1.00      2.67     0.03                           callValue(std::__cxx11::basic_string<char, 
+                                                      std::char_traits<char>, 
+                                                      std::allocator<char> > const&)
+
+
+
 The -O3 flag tells the compiler to optimize the code for speed at the cost of memory 
 efficiency. It does all the -O2 optimizations and more, which greatly increases compilation time.
+
