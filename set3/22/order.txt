@@ -1,7 +1,9 @@
 txt/intro.txt
 fib/fib.h
 fib/fib.ih
+fin/rawfib.cc
 fib/fib.cc
+fib/goldenRatio.cc
 main.ih
 main.cc
 txt/timing41x.txt
