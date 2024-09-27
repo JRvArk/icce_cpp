@@ -8,7 +8,9 @@ void indent_more();
 
 void reset_indentation();
 
-void indented_cout(const char* str);
+size_t indent_depth(const char* command, size_t step_input = 1);
+
+std::ostream& indented_cout();
 
 void step_size(int size);
 #endif
