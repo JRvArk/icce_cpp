@@ -11,8 +11,3 @@ size_t fib(size_t value)            // Optimized calculation of Fibonacci.
     
     return fibval[value];
 }
-
-double goldenRatio(size_t value)    // Calculate the golden ratio using fib.
-{
-    return (double)fib(value + 1) / (double)fib(value);
-}
