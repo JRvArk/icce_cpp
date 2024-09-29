@@ -5,14 +5,16 @@ class Bottle
 {
     public:
         Bottle(double capacity);
-        double getCapacity();
-        double getAmount();
+
+        double getCapacity() const;
+        double getAmount() const;
+        
         void addWater(double capacity);
         void removeWater(double amount);
 
     private:
-        double capacity;
-        double amount;
+        double d_capacity;
+        double d_amount;
 };
 
 #endif
