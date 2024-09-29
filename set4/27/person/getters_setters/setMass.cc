@@ -2,7 +2,7 @@
 
 void Person::setMass(string const &mass)
 {
-    if(mass.find_first_not_of("0123456789") != string::npos)
+    if(mass.find_first_not_of("0123456789") != string::npos or mass.empty())
         cout << "Provide a correct mass, or 0.\n";
     else 
     {
