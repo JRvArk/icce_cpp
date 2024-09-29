@@ -1,4 +1,4 @@
-CXX = g++
+CXX = g++-14
 CXXFLAGS ?= -std=c++26 -Wall
 
 CXX_LIBSOURCES = $(shell find calculator -type f -name \*.cc)
