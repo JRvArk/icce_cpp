@@ -8,4 +8,5 @@ void Person::setPhone(string const &phone)
         d_phone = phone;
     else
         cout << "Please provide a phone number only containing digits.\n";
+        d_phone = "wrong input";
 }
