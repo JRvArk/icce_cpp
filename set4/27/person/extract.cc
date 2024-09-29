@@ -19,5 +19,5 @@ void Person::extract(istream &is)
     getline(iss, part, ',');
     setPhone(part);
     getline(iss, part);
-    setMass(stoi(part));
+    setMass(part);
 }

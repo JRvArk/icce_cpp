@@ -1,10 +1,12 @@
 #include "program.ih"
 
-void readPersons(vector<Person> &persons)
+void readPersons(std::vector<Person> &persons, size_t amt)
 {
-    for (auto &person : persons)    // Loop over all persons in list.
+    for (size_t num = 0; num < amt; ++num)
     {
-        cout >> '? ';
+        cout << "? ";
+        Person person = Person();
         person.extract(cin);        // Read data from cin to person.
+        persons.push_back(person);
     }
 }

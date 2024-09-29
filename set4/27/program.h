@@ -5,7 +5,7 @@
 
 #include "person/person.h"
 
-void readPersons(vector<Person> &persons);
-void writePersons(const vector<Person> &persons);
+void readPersons(std::vector<Person> &persons, size_t amt);
+void writePersons(std::vector<Person> const &persons);
 
 #endif
