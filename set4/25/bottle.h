@@ -1,5 +1,5 @@
-#ifndef BOTTLE_H
-#define BOTTLE_H
+#ifndef INCLUDED_BOTTLE_
+#define INCLUDED_BOTTLE_
 
 class Bottle
 {
