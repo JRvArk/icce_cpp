@@ -1,0 +1,3 @@
+In this assignment we use our implementation of class Person in a simple program
+that reads and writes the data of multiple Person objects form and onto cin and
+cout.
