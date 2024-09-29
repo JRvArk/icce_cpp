@@ -1,0 +1,2 @@
+In this assignment the class Person, as described in C++ Annotations, is
+implemented and extended with insert and extract members.
