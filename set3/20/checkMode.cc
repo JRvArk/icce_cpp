@@ -1,17 +1,14 @@
 #include "main.ih"
 
 
-ArgumentStruct checkMode(string arg)
+Mode checkMode(string arg)
 {
-    ArgumentStruct argumentStruct; ## replace to Enum
-
-    switch(arg)...
     if (arg == "-c")
-        argumentStruct.charArg = true;
+        return Mode::CHARCOUNT;
     else if (arg == "-w")
-        argumentStruct.wordArg = true;
+        return Mode::WORDCOUNT;
     else if (arg == "-l")
-        argumentStruct.lineArg = true;
-
-    return argumentStruct;
+        return Mode::LINECOUNT;
+    else
+        return Mode::NONE;
 }
