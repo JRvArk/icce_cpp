@@ -1,7 +1,7 @@
 #include "person.ih"
 
 Person::Person(string const &name, string const &address, string const &phone, 
-               size_t mass)
+               string const &mass)
 {
     setName(name);
     setAddress(address);

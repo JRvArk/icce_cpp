@@ -7,15 +7,15 @@
 class Person
 {
     public:
-        Person();                   // 1
+        Person();                               // 1
         Person(std::string const &name,
                std::string const &address = "unknown",
                std::string const &phone = "unknown",
-               size_t mass = 0);    // 2
+               std::string const &mass = "0");    // 2
         void setName(std::string const &name);
         void setAddress(std::string const &address);
         void setPhone(std::string const &phone);
-        void setMass(size_t mass);
+        void setMass(std::string const &mass);
 
         std::string const &name() const;
         std::string const &address() const;
