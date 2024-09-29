@@ -3,6 +3,9 @@
 
 class Bottle
 {
+    double d_capacity;
+    double d_amount;
+
     public:
         Bottle(double capacity);
 
@@ -11,10 +14,6 @@ class Bottle
         
         void addWater(double capacity);
         void removeWater(double amount);
-
-    private:
-        double d_capacity;
-        double d_amount;
 };
 
 #endif
