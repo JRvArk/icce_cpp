@@ -17,11 +17,17 @@ main: main.o libconv.a
 main.o: main.cc
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
+readPersons.o: readPersons.cc
+	$(CXX) $(CXXFLAGS) -c -o $@ $<
+
+writePersons.o: writePersons.cc
+	$(CXX) $(CXXFLAGS) -c -o $@ $<
+
 $(CXX_LIBOBJS): %.o : %.cc
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
-libconv.a: $(CXX_LIBOBJS)
+libconv.a: $(CXX_LIBOBJS) readPersons.o writePersons.o
 	ar rcs $@ $^
 
 clean:
-	rm -f main libconv.a main.o $(CXX_LIBOBJS)
+	rm -f main libconv.a main.o $(CXX_LIBOBJS) readPersons.o writePersons.o

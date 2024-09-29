@@ -1,20 +1,23 @@
 intro.txt
 
-person.h
-person.ih
+-main.cc
+-person/frame
 
-person1.cc
-person2.cc
+person/person.h
+person/person.ih
 
-setName.cc
-setAddress.cc
-setPhone.cc
-setMass.cc
+person/person1.cc
+person/person2.cc
 
-name.cc
-address.cc
-phone.cc
-mass.cc
+person/getters_setters/setName.cc
+person/getters_setters/setAddress.cc
+person/getters_setters/setPhone.cc
+person/getters_setters/setMass.cc
 
-insert.cc
-extract.cc
+person/getters_setters/name.cc
+person/getters_setters/address.cc
+person/getters_setters/phone.cc
+person/getters_setters/mass.cc
+
+person/insert.cc
+person/extract.cc
