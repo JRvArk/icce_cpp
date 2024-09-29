@@ -1,6 +1,6 @@
 #include "line.h"
 
-#include <istream>
+#include <iostream>
 
 using namespace std;
 
