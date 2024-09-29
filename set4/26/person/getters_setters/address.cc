@@ -1,4 +1,4 @@
-#include "person.ih"
+#include "../person.ih"
 
 string const &Person::address() const
 {

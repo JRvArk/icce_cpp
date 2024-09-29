@@ -1,4 +1,4 @@
-#include "person.ih"
+#include "../person.ih"
 
 void Person::setMass(size_t mass)
 {

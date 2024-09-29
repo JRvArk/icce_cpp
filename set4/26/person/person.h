@@ -25,7 +25,7 @@ class Person
                                     // Insert info on this person into os.
         void insert(std::ostream &os) const;
                                     // Set data members using data from is.
-        void extract(std::istream &is) const;
+        void extract(std::istream &is);
     private:
         std::string d_name;         // name of person
         std::string d_address;      // address field

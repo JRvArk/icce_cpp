@@ -1,17 +1,23 @@
 #include "person.ih"
+#include <iostream>
+#include <sstream>
+#include <vector>
 
-void Person::extract(istream &is) const
+using namespace std;
+
+void Person::extract(istream &is)
 {
-    string text;
-    getline(text, ',');
-    setName(text);
+    string input;
+    getline(is, input);
+    istringstream iss(input);
     
-    getline(text, ',');
-    setAddress(text);
-    
-    getline(text, ',');
-    setPhone(text);
-    
-    getline(text, '\n');
-    setMass(stoi(text));
+    string part;
+    getline(iss, part, ',');
+    setName(part);
+    getline(iss, part, ',');
+    setAddress(part);
+    getline(iss, part, ',');
+    setPhone(part);
+    getline(iss, part);
+    setMass(stoi(part));
 }

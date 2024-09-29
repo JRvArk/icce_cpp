@@ -1,4 +1,4 @@
-#include "person.ih"
+#include "../person.ih"
 
 size_t Person::mass() const
 {
