@@ -7,11 +7,11 @@
 class Person
 {
     public:
-        Person();
+        Person();                   // 1
         Person(std::string const &name,
                std::string const &address = "unknown",
                std::string const &phone = "unknown",
-               size_t mass = 0);
+               size_t mass = 0);    // 2
         void setName(std::string const &name);
         void setAddress(std::string const &address);
         void setPhone(std::string const &phone);
