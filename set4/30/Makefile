@@ -1,0 +1,27 @@
+CXX = g++
+CXXFLAGS ?= -std=c++26 -Wall
+
+CXX_LIBSOURCES = $(shell find calculator -type f -name \*.cc)
+CXX_LIBOBJS = $(patsubst %.cc, %.o, $(CXX_LIBSOURCES))
+
+# target: prerequisites
+#	terminal line..
+
+# $@ : target
+# $< : FIRST prerequisites
+# $^ : ALL   prerequisites
+
+main: main.o libconv.a
+	$(CXX) $(CXXFLAGS) -o main main.o -L. -lconv
+
+main.o: main.cc
+	$(CXX) $(CXXFLAGS) -c -o $@ $<
+
+$(CXX_LIBOBJS): %.o : %.cc
+	$(CXX) $(CXXFLAGS) -c -o $@ $<
+
+libconv.a: $(CXX_LIBOBJS)
+	ar rcs $@ $^
+
+clean:
+	rm -f main libconv.a main.o $(CXX_LIBOBJS)
