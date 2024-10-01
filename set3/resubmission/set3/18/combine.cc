@@ -1,21 +1,21 @@
 #include "main.ih"
 
-returnValues combine(int argc, char *argv[])
+ReturnValues combine(int argc, char *argv[])
 {
-    int requested = stoi(argv[1]);
+    size_t requested = stoul(argv[1]);
 
-    returnValues ReturnValues;
-    ReturnValues.nr = requested;
+    ReturnValues returnValues;
+    returnValues.nr = requested;
     if (requested <= argc)
     {
-        ReturnValues.ok = true;
-        ReturnValues.value = argv[requested - 1];
+        returnValues.ok = true;
+        returnValues.value = argv[requested - 1];
     }
     else
     {
-        ReturnValues.ok = false;
-        ReturnValues.value = "";
+        returnValues.ok = false;
+        returnValues.value = "";
     }
 
-    return ReturnValues;
+    return returnValues;
 }

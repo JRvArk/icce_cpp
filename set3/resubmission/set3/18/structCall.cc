@@ -2,8 +2,16 @@
 
 bool structCall(int argc, char *argv[])
 {
-    returnValues ReturnValues = combine(argc, argv);
-    return printCall(ReturnValues.ok, 
-                    ReturnValues.nr, 
-                    ReturnValues.value);
+    ReturnValues returnValues = combine(argc, argv);
+    
+    if (returnValues.ok == false)
+    {
+        usageMsg();
+        return false;
+    }
+    else 
+    {
+        printCall(returnValues.nr, returnValues.value);
+        return true;
+    }
 }
