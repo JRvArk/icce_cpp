@@ -6,10 +6,10 @@
                                     // arguments have been passed.
                                     // specify any double value as third
                                     // argument to use this overloaded function
-double sum(int argc, char **argv, double anyDoubleValue) // HB: unused parameter
+double sum(size_t argc, char **argv, double anyDoubleValue)
 {
     double sum = 0;
-    for (int idx = 1; idx < argc; ++idx) // HB: TYPE, CANON
+    for (size_t idx = 1; idx != argc; ++idx)
         sum += stod(argv[idx]);
     return sum;
 }
