@@ -1,6 +1,3 @@
-// HB: rating: 0
-// HB: TME
-
 #include "main.ih"
 
 int main()

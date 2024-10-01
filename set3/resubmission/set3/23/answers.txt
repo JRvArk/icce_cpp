@@ -1,34 +1,54 @@
-1. The access control here is done by the function 
+1. how does this access control work?
+  The access control here is done by the function 
+    size_t indent_depth(const char* command, size_t step_input = 1)
+  this function stores the static variables indent_depth and step_size as well 
+  as modifies them if possible when it is called by the other functions in the 
+  libary. 
 
-  size_t indent_depth(const char* command, size_t step_input = 1)
+2. What would the user do to circumvent this access control, without modifying
+the header file or library?
+  -
 
-this function stores the static variables indent_depth and step_size as well as 
-modifies them if possible when it is called by the other functions in the 
-libary. 
+3. Why is a static local variable better than a global one?
+  A static local variable is preferable over a static global one because a 
+  global one would be accessible to all functions to modify at any moment which 
+  could lead to errors for instance the numer of indents to add or remove 
+  overflowing resulting an disfunctional program.
 
-2. The user 
+4. What is the reasoning for using a separate source file for each function?
+  The separate file for each function prevents unused functions from piggy 
+  backing into libraries taking up space in the program by value of being in the
+  same file as a function that is being used. It also allows for faster 
+  compilation times as functions can be compiled ahead of being linked together 
+  in libary. This also means that if function is modified the whole source code 
+  does not have to be recompiled before being built into a library; only the 
+  modified function does.
 
-3. A static local variable is preferable over a static global one because a 
-global one would be accessible to all functions to modify at any moment which 
-could lead to errors for instance the numer of indents to add or remove 
-overflowing resulting an disfunctional program.
+5. Having many source files causes extra work for the compiler. Where lies the
+bulk of this work?
+  When using one source file per function the compiler has to fetch the source 
+  code for every function before being able to compile them, moreover, it means 
+  that the compiler has to compile to then fetch the new executables for each 
+  function before linking them together. 
 
-4. The separate file for each function prevents unused functions from piggy 
-backing into libraries taking up space in the program by value of being in the
-same file as a function that is being used. It also allows for faster 
-compilation times as functions can be compiled ahead of being linked together in
-libary. This also means that if function is modified the whole source code does 
-not have to be recompiled before being built into a library; only the modified 
-function does.
+6. How do we help reduce the extra time it takes?
+  To reduce the extra time that takes we precompile each function so that when 
+  it comes time to create the library the compiler does not have to do that thus 
+  saving time.
 
-5. When using one source file per function the compiler has to fetch the source 
-code for every function before being able to compile them, moreover, it means 
-that the compiler has to compile to then fetch the new executables for each 
-function before linking them together. 
-
-6. To reduce the extra time that takes we precompile each function so that when 
-it comes time to create the library the compiler does not have to do that thus 
-saving time.
-
-7. By looking at the makefile you would be able to see that each function has 
-been compiled ahead of the libarary being built.
+7. Did you actually do that to create libindent.h? How can we see that?
+  We compile all our files and libindent.a is created by putting together all
+  object files in the indent directory. This is done with the following command:
+    ar rcs libindent.a indent/*.o
+  If any object file is changed, e.g. a source file is changed and recompiled
+  using a Makefile, libindent.a is remade too. This saves time as all files in
+  indent do not have to be compiled everytime.
+  The source files itself are compiled using:
+    g++ -std=c++26 -Wall -c -o main.cc main.o
+    g++ -std=c++26 -Wall -c -o indent/indent_less.cc indent/indent_less.o
+    g++ -std=c++26 -Wall -c -o indent/indent_more.cc indent/indent_more.o
+    g++ -std=c++26 -Wall -c -o indent/indented_cout.cc indent/indented_cout.o
+    g++ -std=c++26 -Wall -c -o indent/reset_indent.cc indent/reset_indent.o
+    g++ -std=c++26 -Wall -c -o indent/step_size.cc indent/step_size.o
+  We link everything together using:
+    g++ -o program main.o -L. -lconv

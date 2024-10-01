@@ -2,6 +2,5 @@
 
 void indent_more()
 {
-	const char* command = "inc"; // HB: COAT, IRE
-	indent_depth(command);
+	indent_depth(INCREASE);
 }

@@ -1,5 +1,9 @@
-#include <iostream>
-#include <string>
 #include "indent.h"
+
+#include <string>
+
+enum {
+    INDENT_SPACE_AMT = 4
+};
 
 using namespace std;
