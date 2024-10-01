@@ -1,13 +1,6 @@
-// HB:
-// HB: the follow part of the exercise seems to still be missing:
-// HB:
-// HB: "Also look at the implications of the results for the way the functions were defined, 
-// HB: in particular what you can learn from it when defining your own function parameters."
-// HB:
-
-The -O2 flag tells the compiler to do optimizations on the code, does all the optimizations to
-make the code smaller and run faster without making it take more space during execution. This
-comes at the cost of a longer compilation time. 
+The -O2 flag tells the compiler to do optimizations on the code, does all the optimizations
+to make the code smaller and run faster without making it take more space during execution. 
+This comes at the cost of a longer compilation time. 
 
 profiling results for -O2 flag:
 
