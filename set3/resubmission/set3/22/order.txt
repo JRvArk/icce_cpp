@@ -1,12 +1,12 @@
 txt/intro.txt
-txt/timing41x.txt
-txt/timing41.txt
-txt/beyond37.txt
-
 fib/fib.h
 fib/fib.ih
-fib/rawfib.cc
+fib/fibValueMax.cc
+fin/rawfib.cc
 fib/fib.cc
 fib/goldenRatio.cc
 main.ih
 main.cc
+txt/timing41x.txt
+txt/timing41.txt
+txt/beyond37.txt
