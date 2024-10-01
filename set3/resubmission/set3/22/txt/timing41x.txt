@@ -1,0 +1,6 @@
+By running the executable using:
+    (time ./a.out 41 x) 2> timing41x
+we get the following time output:
+real	0m0.759s
+user	0m0.665s
+sys	0m0.083s

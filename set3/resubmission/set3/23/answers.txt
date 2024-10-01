@@ -1,0 +1,29 @@
+1. The access control here is done by the function 
+
+  size_t indent_depth(const char* command, size_t step_input = 1)
+
+this function stores the static variables indent_depth and step_size as well as modifies them 
+if possible when it is called by the other functions in the libaray. 
+
+2. The user 
+
+3. A static local variable is preferable over a static global one because a global one would
+be accessible to all functions to modify at any moment which could lead to errors for instance
+the numer of indents to add or remove overflowing resulting an disfunctional program.
+
+4. The separate file for each function prevents unused functions from piggy backing into 
+libraries taking up space in the program by value of being in the same file as a function 
+that is being used. It also allows for faster compilation times as functions can be compiled
+ahead of being linked together in libary. This also means that if function is modified
+the whole source code does not have to be recompiled before being built into a library; only 
+the modified function does.
+
+5. When using one source file per function the compiler has to fetch the source code for every
+function before being able to compile them, moreover, it means that the compiler has to compile
+to then fetch the new executables for each function before linking them together. 
+
+6. To reduce the extra time that takes we precompile each function so that when it comes time 
+to create the library the compiler does not have to do that thus saving time.
+
+7. By looking at the makefile you would be able to see that each function has been compiled 
+ahead of the libarary being built.
