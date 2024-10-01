@@ -1,17 +1,124 @@
 In what situation is it appropriate to
 1. define an int-type parameter:
-    It is appropriate to use an int-type parameter when we need to work with
-    numbers without the original int-type being changed. In the code example 
-    this is illustrated because we make calculations and then display it to
-    cout.
-        void printCalculations(size_t value)
-                                    // MIN_VALUE is an enum.
-            while(value < MIN_VALUE)
-                value *= 2;
-            cout << value << '\n';
+    It is appropriate to use an int-type parameter when passing by value. In the
+    code example this is illustrated because we limit calculations to the scope
+    of the function and return the result.
+        size_t square(size_t num)
+        {
+            return num * num;
+        }
 
+2. define a std::string value parameter:
+    It is appropriate to use a string value parameter when passing by value. In
+    the code example this is illustrated because we create a new ciphered string 
+    from the input string.
+        std::string cipherLower(size_t shift, std::string input)
+        {
+            for (char &c : shift)
+                c = char(int(c + shift - 'a') % 26 + 'a');
+            return string;
+        }
+
+        int main()
+        {
+            string text = "example text";
+            string ciphered = cipherLower(3, text);
+        }
 
 3. define a const reference to an int-type parameter:
     It is not appropriate to use a const reference to an int-type parameter as
     int-types are rather small, and it would be more efficient or appropriate to
-    use a const int-type parameter.
+    pass by value.
+
+4. define a const reference to a std::string parameter:
+    It is appropriate to use a const reference to a string when you do not need
+    to modify the string. In the code example this is illustrated because we do
+    not modify the string.
+        void printString(const &input)
+        {
+            cout << input << '\n';
+        }
+
+5. define a non-const reference to an int-type parameter:
+    It is not appropriate to use a non-const reference to an int-type parameter
+    because int-types are generally not large enough to justify passing it like
+    this. Passing by value generally is more efficient.
+
+6. define a non-const reference to a std::string parameter:
+    It is appropriate to use a non-const reference to a string parameter when
+    you want to modify the original string passed as parameter. In the code
+    example this is illustrated by doing this by appending ".\n" to the string.
+        void endLineString(string &line)
+        {
+            line += ".\n";
+        }
+
+7. define a const rvalue-reference to an int-type parameter:
+    It is not appropriate to use a const rvalue-reference to an int-type
+    parameter as passing by value is more simple and has minimal cost. Using
+    const rvalue-reference to an int-type parameter yields no real performance
+    and can make code harder to read.
+
+8. define a const rvalue-reference to a std::string parameter:
+    It is not appropriate to use a const rvalue-reference to a string parameter,
+    as passing by const reference will also accept lvalues, and is also simpler.
+
+9. define a rvalue-reference to an int-type parameter:
+    It is not appropriate to use an rvalue-reference to an int-type parameter,
+    as passing by value is more efficient for int-type parameters.
+
+10. define a rvalue-reference to a std::string parameter:
+    It is not appropriate to use a rvalue-reference to a string parameter, as
+    passing by reference will be simpler and will also accept lvalues.
+
+11. return an int-type value:
+    It is appropriate to return an int-type value if you want to return an
+    int-type created in a function. This is illustrated in the code example as
+    we calculate a value using parameters and return it by value.
+        size_t calculate(size_t num1, size_t num2, size_t num3)
+        {
+            return num1 * (num2 + num3);
+        }
+
+12. return a std::string value:
+    It is appropriate to return a std::string value if you create a string and
+    need to return it. This is illustrated in the code example as we create a
+    string and then return it.
+        std::string simpleString()
+        {
+            return "Simple string.\n";
+        }
+
+13. return a const reference to an int:
+    It is not appropriate to return a (const) reference to an int, as returning
+    the int value is more simple and efficient because of int's size.
+
+14. return a const reference to a std::string:
+    It is not appropriate to return a (const) reference to a std::string, as you
+    should not return any variable created inside the scope of a function. If
+    A reference of a parameter is needed, then you do not need to use a function
+    to get the const reference.
+
+15. return a non-const reference to an int:
+    It is not appropriate to return a non-const reference to an int, for the 
+    same reason as for 13.
+
+16. return a non-const reference to a std::string:
+    It is not appropriate to return a non-const reference to a string, for the
+    same reason as for 14.
+
+17. return a const rvalue-reference to an int:
+    It is not appropriate to return a (const) rvalue-reference to an int, as an
+    int is a simple and small type where returning by value is appropriate.
+
+18. return a const rvalue-reference to a std::string:
+    It is not appropriate to return a (const) rvalue-reference to a string, as
+    string is also not complex enough where using rvalues is appropriate.
+
+19. return a rvalue-reference to an int:
+    It is not appropriate to return a rvalue-reference to an int, for the same
+    reason as for 17.
+
+20. return a rvalue-reference to a std::string:
+    It is not appropriate to return a rvalue-reference to a string, for the same
+    reason as for 18.
