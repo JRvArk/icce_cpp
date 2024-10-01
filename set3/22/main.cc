@@ -2,7 +2,7 @@
 
 int main(int argc, char *argv[])
 {
-    size_t value = stoul(argv[1]);
+    size_t const value = stoul(argv[1]);
     if (argc != 2)
         cout << "Unoptimized Fibonacci " << value 
              << ": " << rawfib(value) << '\n';

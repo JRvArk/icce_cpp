@@ -5,7 +5,8 @@
 
 enum
 {
-    ENDFIB = 90                     // Don't generate Fibonacci beyond ENDFIB.
+    MAXFIB = 90,                    // Don't generate Fibonacci beyond MAXFIB.
+    ENDFIB = MAXFIB + 1             // Array size according to MAXFIB.
 };
 
 size_t rawfib(size_t value);
