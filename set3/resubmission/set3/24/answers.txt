@@ -99,3 +99,12 @@ Each sample counts as 0.01 seconds.
   0.31      3.23     0.01                     callRef(std::__cxx11::basic_string<char, 
                                                       std::char_traits<char>, 
                                                       std::allocator<char> > const&)
+
+
+Looking at the results we notice that generally passing arguments to a function through 
+reference is generally faster. This is shown by the self time of the callRef being smaller 
+than that of the callValue function in every situation. However, the function with the const
+reference parameter (fun2) takes significantly longer to run than the function that takes a
+copy of the value as a parameter (fun) when the program is not compiled using any  
+optimization flags. But when using the optimiation flags it is faster to run the function 
+that takes the arguments through reference.
