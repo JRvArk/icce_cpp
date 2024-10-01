@@ -1,4 +1,166 @@
-In what situation is it appropriate to
+Check:
+3
+
+In what situation is it appropriate to:
+
+1) define an int-type parameter?
+
+It is appropriate to use an int-type parameter when we need to work (modify)
+with numbers without the original int-type being changed. In the code example 
+this is illustrated because we make calculations on a copy and then display
+it to cout.
+
+    void printCalculations(size_t value)
+                             // MIN_VALUE is an enum.
+        while(value < MIN_VALUE)
+            value *= 2;
+        cout << value << '\n';
+
+2) define a std::string value parameter?
+
+It is appropriate to use a string value parameter when passing by value.
+The entire string is copied so only use this when a copy is required and
+when you want the original to be unchanged. In
+the code example this is illustrated because a copy of s1 is made and 
+modified. At the end of main two strings exist.
+
+string addDot(string s)
+{
+    return s.append(".");
+}
+
+int main()
+{
+    string s1 = "This is a string";
+
+    string s2 = addDot(s1);
+}
+
+3) define a const reference to an int-type parameter?
+
+It is not appropriate to use a const reference to an int-type parameter as
+int-types are rather small, and it would be more efficient or appropriate to
+use a const int-type parameter.
+
+
+4) define a const reference to a std::string value parameter?
+
+It is appropriate to use a const reference parameter when you do not need to 
+modify the string. A copy is not desirable, as objects are often of such
+a size that using a reference is more efficient than using a copy.
+In the code example this is illustrated because the contents
+of s are not modified.
+
+void print(string const &s)
+{
+    cout << s;
+}
+
+5) define a non-const reference to an int-type parameter?
+
+It is appropriate to use a non const reference to an int-type parameter when
+the aim of the function is to modify the given argument. That is, when passing
+by reference is the aim. In the code example this is illustrated because
+we define and initialize a value, which is modified by the function add 5.
+Modified, thus a non-const reference is needed.
+
+add5(int &value)
+{
+    value += 5;
+}
+
+int main()
+{
+    int value = 10;
+    add5(value);    // value is now 15.
+}
+
+6) define a non-const reference to a std::string value parameter?
+
+It is appropriate to use a non-const reference to a string as parameter when 
+the string given as argument is to be modified. In the code example this is
+illustrated because the string that was initialized is the first line of main
+is now appended with dot. That is, we need to pass by reference and use a 
+non-const parameter.
+
+void addDot(string &s)
+{
+    s.append(".");
+}
+
+int main()
+{
+    string s1{"hello"};
+
+    addDot(s1); // now: hello.
+}
+
+7) define a const rvalue-reference to an int-type parameter?
+
+It is appropriate to use const rvalue-references when you do not want to use 
+a copy nor want to modify a temporary value. In the code example this is
+illustrated because the temporary string is not copied but binded to an rvalue
+reference x, which is then printed to the standard output stream. This saves 
+memory by not having to allocate memory for an lvalue.
+
+void printRvalue(int const &&integer)
+{
+    cout << integer << '\n';
+}
+
+int main()
+{
+    printRvalue(5);
+}
+
+8) define a const rvalue-reference to a std::string parameter?
+
+It is appropriate to use const rvalue-references when you do not want to use 
+a copy nor want to modify a temporary value. In the code example this is
+illustrated because the temporary string is not copied but binded to an rvalue
+reference x, which is then printed to the standard output stream. This saves 
+memory by not having to allocate memory for an lvalue.
+
+void printRvalue(string const &&str)
+{
+    cout << str << '\n';
+}
+
+int main()
+{
+    printRvalue("temporary");
+}
+
+9) define an rvalue-reference to an int-type parameter?
+
+
+10) define an rvalue-reference to a std::string parameter?
+
+11) return an int-type value?
+
+It is appropriate to use an int-type return value when you want to return a
+copy of an integer. This is useful when, for example, you want to sum two
+integers together and print the sum to the standard output stream.
+In the code example this is illustrated because we have an 
+
+12) return a std::string value?
+
+13) return a const reference to an int?
+
+14) return a const reference to a std::string?
+
+15) return a non-const reference to an int?
+
+16) return a non-const reference to a std::string?
+
+17) return a const rvalue-reference to an int?
+
+18) return a const rvalue-reference to a std::string?
+
+19) return an rvalue-reference to an int?
+
+20) return an rvalue-reference to a std::string?
+=======
 1. define an int-type parameter:
     It is appropriate to use an int-type parameter when passing by value. In the
     code example this is illustrated because we limit calculations to the scope

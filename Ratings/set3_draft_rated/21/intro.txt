@@ -1,0 +1,1 @@
+The goal of the exercise is implementing a case-insensitive string search function, findcase, that mimics C++'s string::find but ignores letter case. The function should return the position of the first occurrence of a target substring in a given string, starting from a specified offset, or string::npos if the target is not found or is empty.

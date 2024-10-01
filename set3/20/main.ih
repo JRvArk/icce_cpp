@@ -3,13 +3,15 @@
 
 using namespace std;
 
-struct ArgumentStruct {
-    bool charArg = false;
-    bool wordArg = false;
-    bool lineArg = false;
+
+enum Mode{
+    CHARCOUNT,
+    WORDCOUNT,
+    LINECOUNT,
+    NONE
 };
 
-ArgumentStruct checkMode(string arg);
+Mode checkMode(string arg);
 
 size_t charCount();
 

@@ -1,0 +1,2 @@
+Describe what encapsulation and data hiding mean. To provide  a small example
+and tell why the implementation of the class is irrelevant.

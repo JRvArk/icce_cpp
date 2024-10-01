@@ -1,0 +1,19 @@
+// HB: rating: 0
+
+In what situation is it appropriate to
+1. define an int-type parameter:
+    It is appropriate to use an int-type parameter when we need to work with
+    numbers without the original int-type being changed. In the code example 
+    this is illustrated because we make calculations and then display it to
+    cout.
+        void printCalculations(size_t value)
+                                    // MIN_VALUE is an enum.
+            while(value < MIN_VALUE)
+                value *= 2;
+            cout << value << '\n';
+
+
+3. define a const reference to an int-type parameter:
+    It is not appropriate to use a const reference to an int-type parameter as
+    int-types are rather small, and it would be more efficient or appropriate to
+    use a const int-type parameter.
