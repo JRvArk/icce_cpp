@@ -1,0 +1,22 @@
+This program prints out text with certain amounts of indenting using the function 
+  std::ostream& indented_cout();
+
+The numebr of indents this function will output in front of the text can be controlled by
+the following functions:
+
+  void indent_less(); which decreases the number of indents that will be inserted
+
+  void indent_more(); which increases the number of indents that will be inserted
+
+  void reset_indentation(); which sets the number of indents inserted back to 0
+
+The aditionnal function void step_size(int size); controls how many indents are added or 
+removed by the abovementionned functions, although it can only do so if it is the first 
+function called.
+
+All these functions are coordinated by the function 
+
+size_t indent_depth(const char* command, size_t step_input = 1);
+
+which acts as a sort of access control to indent_depth and step_size only allowing them to 
+be modified if allowes.
