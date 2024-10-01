@@ -2,8 +2,7 @@
 
 size_t fib(size_t value)            // Optimized calculation of Fibonacci.
 {                                   // Holds fib(idx) at fibval[idx].
-    if (value > MAXFIB) 
-        value = MAXFIB;
+    value = fibValueMax(value);     // Ensure value is at most MAXFIB.
     static size_t fibval[ENDFIB] = {};
     if (value <= 2) 
         return 1;                   // Defined values

@@ -13,6 +13,8 @@ size_t rawfib(size_t value);
 
 size_t fib(size_t value);
 
+size_t fibValueMax(size_t value);
+
 double goldenRatio(size_t value);
 
 #endif
