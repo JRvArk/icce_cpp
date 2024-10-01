@@ -4,14 +4,10 @@
 
 int main(int argc, char *argv[])
 {
-    string mode = argv[1];
-    ArgumentStruct argumentStruct = checkMode(mode); // HB: again, this function makes things more complicated than it needs to be
-    
-    if (argumentStruct.charArg)
-        cout << charCount() << '\n';
-    else if (argumentStruct.wordArg)
-        cout << wordCount() << '\n';
-    else if (argumentStruct.lineArg)
-        cout << lineCount() << '\n';
-    
+    string const mode = argv[1];
+                                    // First check for correct argument.
+    if (mode.front() == '-' and mode.size() == 2)
+        checkMode(mode.back());
+    else
+        cout << "A wrong argument is given.\n";
 }

@@ -2,9 +2,8 @@ intro.txt
 
 main.ih
 charCount.cc
-checkMode.cc
-lineCount.cc
 wordCount.cc
+lineCount.cc
 
 main.cc
 

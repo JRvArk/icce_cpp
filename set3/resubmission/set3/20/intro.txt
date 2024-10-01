@@ -1,1 +1,4 @@
-This exercise involves designing and implementing a simplified version of the Unix 'wc' (word count) program, which counts characters, words, or lines based on a command-line argument. The program should read input from the standard input stream and output results to the standard output stream.
+This exercise involves designing and implementing a simplified version of the 
+Unix 'wc' (word count) program, which counts characters, words, or lines based 
+on a command-line argument. The program should read input from the standard 
+input stream and output results to the standard output stream.
