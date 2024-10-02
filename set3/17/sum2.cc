@@ -6,7 +6,7 @@
                                     // arguments have been passed.
                                     // specify any double value as third
                                     // argument to use this overloaded function
-double sum(size_t argc, char **argv, double anyDoubleValue)
+double sum(size_t argc, char **argv, double)
 {
     double sum = 0;
     for (size_t idx = 1; idx != argc; ++idx)

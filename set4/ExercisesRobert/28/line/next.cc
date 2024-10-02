@@ -2,20 +2,17 @@
 
 string Line::next()
 {
-    if (!(d_position <)= d_lineLength)
-    {   
-        size_t idx = d_position;
-        while (!isspace(d_line[idx]))
-        {
-            ++idx;
-            if (!(idx <= d_lineLength))
-                break;
-        }
-        string subString = d_line.substr(d_position, idx - d_position);
-        d_position = ++idx;
-
-        return subString;
+    if (size_t firstWs = d_line.find_first_of(" \t", d_position);
+        firstWs != string::npos)
+    {
+        string subStr = d_line.substr(d_position, d_position - firstWs);
+        d_position += firstWs + 1;
+        return subStr;
     }
     else
-        return string::npos;
+    {
+        d_position = string::npos;
+        return "";
+    }
+        
 }
