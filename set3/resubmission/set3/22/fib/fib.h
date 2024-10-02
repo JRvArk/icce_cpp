@@ -9,11 +9,11 @@ enum
     ENDFIB = MAXFIB + 1             // Array size according to MAXFIB.
 };
 
+size_t fibValueMax(size_t value);
+
 size_t rawfib(size_t value);
 
 size_t fib(size_t value);
-
-size_t fibValueMax(size_t value);
 
 double goldenRatio(size_t value);
 

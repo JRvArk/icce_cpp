@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+
+enum {
+    COUNT_CHARS,
+    COUNT_WORDS,
+    COUNT_LINES
+};
+
+using namespace std;
+
+void checkMode(char const mode);
+
+size_t charCount();
+
+size_t wordCount();
+
+size_t lineCount();

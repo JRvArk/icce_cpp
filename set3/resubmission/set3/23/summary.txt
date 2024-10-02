@@ -1,0 +1,2 @@
+In this assignment we connect internal headers with scope, linkage, and their
+effect on a library by considering an example that considers indenting.

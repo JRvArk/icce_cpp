@@ -20,6 +20,8 @@ void Calculator::evaluate()
         case (MODULUS):
             cout << (int)d_num1 % (int)d_num2;
             break;
+        default:
+            cout << "Error.\n";                  // Should not be reached.
     }
     cout << '\n';
 }

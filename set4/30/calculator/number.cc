@@ -22,8 +22,10 @@ namespace {
         if (op == MODULUS)          // and whether the modulus operator is used.
         {
             if (not isInt or num < 0)
+            {
                 cout << "Only non-negative ints: ";
                 return false;
+            }
         }
         return true;
     }
