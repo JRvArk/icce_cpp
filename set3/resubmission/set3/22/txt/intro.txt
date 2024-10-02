@@ -1,3 +1,0 @@
-In this exercise we use recursive functions to calculate the Fibonacci sequence
-(and golden ratio). For this, both an optimized and unoptimized function are 
-created so the difference in performance can be seen and analyzed.

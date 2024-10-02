@@ -1,5 +1,0 @@
-Set: Set3
-
-Authors: Tino Alferink, Robert van Ark, Owen Givlin
-
-Rater: 

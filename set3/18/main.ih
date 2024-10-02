@@ -3,13 +3,14 @@
 
 using namespace std;
 
-struct returnValues {
+struct ReturnValues 
+{
     bool ok;
     size_t nr;
     string value;
 };
 
-returnValues combine(int argc, char *argv[]);
+ReturnValues combine(int argc, char *argv[]);
 
 bool structCall(int argc, char *argv[]);
 
@@ -17,4 +18,4 @@ void boundCall(int argc, char *argv[]);
 
 void usageMsg();
 
-bool printCall(bool ok, size_t nr, string value);
+void printCall(size_t nr, string value);

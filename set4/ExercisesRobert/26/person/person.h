@@ -11,6 +11,10 @@ class Person
     size_t      d_mass;
     
     public:
+        Person();
+        Person(std::string const &name, std::string const address,
+                std::string const &phone, size_t mass);
+
         void setName(std::string const &name);
         void setAddress(std::string const &address); 
         void setPhone(std::string const &phone); 
@@ -20,6 +24,9 @@ class Person
         std::string const &address() const; 
         std::string const &phone()   const; 
         size_t mass()                const;
+
+        void insert(std::ostream &os);
+        void extract(std::istream &is);
 };
         
 #endif
