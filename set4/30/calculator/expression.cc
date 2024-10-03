@@ -1,8 +1,11 @@
 #include "calculator.ih"
 
 namespace {                         // test for non-neg ints in mod case.
-    bool expressionModulus(double num1, bool int1, double num2, bool int2)
+    bool expressionModulus(double num1, bool int1, double num2, bool int2,
+                           Operator op)
     {
+        if (op != MODULUS) // If operator is not modulus then don't check this.
+            return true;
         if ((num1 >= 0 and int1) or (num2 >= 0 and int2))
             return true;
         cout << "When using modulus, ensure both operands are non-negative"
@@ -35,7 +38,5 @@ bool const Calculator::expression()
              << "given.\n";
         return false;               // Immediately return false.
     }
-    if (s_op == MODULUS)
-        correct = expressionModulus(s_num1, s_int1, s_num2, s_int2);
-    return correct;
+    return expressionModulus(s_num1, s_int1, s_num2, s_int2, s_op);
 }
