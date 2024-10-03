@@ -6,9 +6,9 @@ namespace {                         // test for non-neg ints in mod case.
     {
         if (op != MODULUS) // If operator is not modulus then don't check this.
             return true;
-        if ((num1 >= 0 and int1) or (num2 >= 0 and int2))
+        if ((num1 >= 0 and int1) and (num2 >= 0 and int2))
             return true;
-        cout << "When using modulus, ensure both operands are non-negative"
+        cout << "When using modulus, ensure both operands are non-negative "
              << "integrals.\n";
         return false;
     }
@@ -38,5 +38,5 @@ bool const Calculator::expression()
              << "given.\n";
         return false;               // Immediately return false.
     }
-    return expressionModulus(s_num1, s_int1, s_num2, s_int2, s_op);
+    return expressionModulus(s_num1, s_int1, s_num2, s_int2, s_op) and correct;
 }
