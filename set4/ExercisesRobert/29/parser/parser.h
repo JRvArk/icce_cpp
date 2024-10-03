@@ -1,6 +1,7 @@
 #ifndef PARSER_INCLUDED_
 #define PARSER_INCLUDED_
 
+#include "../../28/line/line.h"
 #include <string>
 
 class Parser
