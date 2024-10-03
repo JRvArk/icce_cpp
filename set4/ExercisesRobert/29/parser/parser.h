@@ -6,15 +6,16 @@
 class Parser
 {
     Line d_line;
-    
-    enum Return
-    {
-        NO_NUMBER,
-        NUMBER,
-        EOLN
-    };
+    bool d_integral;
 
-    public:
+    public:                     
+        enum Return         // declared public so it can be used by
+        {                   // class calculator
+            NO_NUMBER,
+            NUMBER,
+            EOLN
+        };
+
         bool reset();
         Return number(double *dest);
         bool isIntegral();
@@ -22,6 +23,8 @@ class Parser
 
     private:
         Return convert(double *dest, std::string const &str);
-        bool pureDouble(double *dest, std:string const &str);
+        bool pureDouble(double *dest, std::string const &str);
 
-}
+};
+
+#endif

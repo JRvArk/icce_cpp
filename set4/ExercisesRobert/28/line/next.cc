@@ -2,17 +2,22 @@
 
 string Line::next()
 {
-    if (size_t firstWs = d_line.find_first_of(" \t", d_position);
-        firstWs != string::npos)
+    if (d_pos == string::npos)
+        return "";
+
+    size_t startPos = d_currentLine.find_first_not_of(" \t", d_pos);
+    if (startPos == string::npos)
     {
-        string subStr = d_line.substr(d_position, d_position - firstWs);
-        d_position += firstWs + 1;
-        return subStr;
-    }
-    else
-    {
-        d_position = string::npos;
+        d_pos = string::npos;
         return "";
     }
-        
+
+    size_t endPos = d_currentLine.find_first_of(" \t", startPos);
+    if (endPos != string::npos)
+        d_pos = endPos;
+    else
+        d_pos = string::npos;
+
+    return d_currentLine.substr(startPos, endPos - startPos);
+
 }

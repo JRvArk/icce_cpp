@@ -2,12 +2,9 @@
 
 bool Line::getLine()
 {
-    d_position = 0;
-    getline(cin, d_line);
+    d_pos = 0;            // reset position index upon reading a new line
+    getline(cin, d_currentLine);
 
-    if (d_line.find_first_not_of(" \t"))
-        return true;
-    else
-        return false;
+    return d_currentLine.find_first_of(" \t") != string::npos;
 
 }

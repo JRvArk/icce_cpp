@@ -5,6 +5,8 @@
 
 class Calculator
 {
+    Parser d_parser;
+    
     public:
         void run();
 
@@ -13,4 +15,6 @@ class Calculator
         bool number(double *dest, bool *isInt);
         bool getOperator();
         void evaluate();
-}
+};
+
+#endif

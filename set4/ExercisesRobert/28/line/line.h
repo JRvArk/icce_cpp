@@ -5,9 +5,8 @@
 
 class Line
 {
-    size_t d_position;
-    std::string d_line;
-    size_t d_lineLength;
+    size_t d_pos;
+    std::string d_currentLine;
 
     public:
         bool getLine();
