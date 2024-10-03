@@ -29,7 +29,8 @@ namespace {
     {                               // If op is not NONE then working on num2.
         if (op == MODULUS and ((not isInt or num < 0)))
         {
-            cout << "Only non-negative ints for modulus: \n";
+            cout << "    When using Modulus, both operands have to be non-"
+                 << "negative integers.\n";
             return false;
         }
         return true;
@@ -49,5 +50,5 @@ bool const Calculator::number(double *dest, bool *isInt)
     *isInt = checkInt(num);         // Set isInt depending on num value.
                                     // Ensure num2 >= 0 and an int if
                                     // calculating with %.
-    return checkModulus(num, s_op, isInt);
+    return checkModulus(num, s_op, *isInt);
 }
