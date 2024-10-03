@@ -4,12 +4,10 @@ namespace {                         // test for non-neg ints in mod case.
     bool expressionModulus(double num1, bool int1, double num2, bool int2)
     {
         if ((num1 >= 0 and int1) or (num2 >= 0 and int2))
-        {
-            cout << "When using modulus, ensure both operands are non-negative"
-                 << "integrals.\n";
-            return false;
-        }
-        return true;
+            return true;
+        cout << "When using modulus, ensure both operands are non-negative"
+             << "integrals.\n";
+        return false;
     }
 }
 
