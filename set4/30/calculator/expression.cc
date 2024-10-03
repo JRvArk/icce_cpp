@@ -11,6 +11,9 @@ bool const Calculator::expression()
     if(not getOperator())
     {
         cout << "Second parameter has to be an operator.\n";
+        if (s_op == MODULUS)        // Display error message for mod case.
+            cout << "    When using Modulus, both operands have to be non-"
+                 << "negative integers.\n";
         correct = false;
     }
     if(not number(&s_num2, &s_int2))

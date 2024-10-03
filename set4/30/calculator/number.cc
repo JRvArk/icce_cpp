@@ -27,9 +27,9 @@ namespace {
 
     bool checkModulus(double num, Operator op, bool isInt)
     {                               // If op is not NONE then working on num2.
-        if (op == MODULUS and (not isInt or num < 0))
+        if (op == MODULUS and ((not isInt or num < 0)))
         {
-            cout << "Only non-negative ints: ";
+            cout << "Only non-negative ints for modulus: \n";
             return false;
         }
         return true;
