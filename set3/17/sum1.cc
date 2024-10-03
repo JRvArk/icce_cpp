@@ -6,10 +6,10 @@
                                     // arguments have been passed.
                                     // specify any int value as third
                                     // argument to use this overloaded function
-int sum(int argc, char **argv, int anyIntegerValue)
+int sum(int argc, char **argv)
 {
-    long sum = 0;
-    for (size_t idx = 1; idx < argc; ++idx)
-        sum += stol(argv[idx]);
+    int sum = 0;
+    for (size_t idx = 1; idx != argc; ++idx)
+        sum += stoi(argv[idx]);
     return sum;
 }

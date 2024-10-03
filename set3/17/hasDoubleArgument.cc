@@ -4,7 +4,7 @@
                                     // provided contains a double value.
 bool hasDoubleArgument(int argc, char **argv)
 {
-    for (size_t idx = 1; idx != argc; ++idx)
+    for (int idx = 1; idx != argc; ++idx)
     {
         string numberString = argv[idx];
         if (numberString.find(".") != string::npos)

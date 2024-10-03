@@ -1,2 +1,0 @@
-The goal of this exercise was to build the program with the code given in order to profile it 
-looking at the different opitmization flags the compiler provides us.
