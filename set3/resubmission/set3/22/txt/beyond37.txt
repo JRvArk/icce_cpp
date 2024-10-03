@@ -1,4 +1,0 @@
-The unoptimized sequence performs fairly well compared to the optimized version
-for lower input values. On one of our computers there is also a point where it
-is clear that execution time starts increasing dramatically, almost 
-exponentially, compared to the optimized function. This is at value = 32.

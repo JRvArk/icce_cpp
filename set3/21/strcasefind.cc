@@ -3,18 +3,16 @@
 size_t strcasefind(string const &str,
                    string const &target, size_t offset = 0)
 {
-    size_t strLength = str.length();
-    size_t targetLength = target.length();
+    size_t const strLength = str.length();
+    size_t const targetLength = target.length();
 
-    size_t idx = offset;
-    string sub;
-    const char *targetC = target.c_str();
-    while (idx <= strLength - targetLength)
+    char const *cTarget = target.c_str();
+    for(size_t const lengthDiff = strLength - targetLength;
+            offset <= lengthDiff;
+             ++offset)
     {
-        sub = str.substr(idx, targetLength);
-        if (strcasecmp(sub.c_str(), targetC) == 0)
-            return idx;
-        idx++;
+        if (strcasecmp(str.substr(offset, targetLength).c_str(), cTarget) == 0)
+            return offset;
     }
     return string::npos;
 }
