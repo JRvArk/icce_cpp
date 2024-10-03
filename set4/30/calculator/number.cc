@@ -34,11 +34,11 @@ namespace {
 bool const Calculator::number(double *dest, bool *isInt)
 {
     string input;
-    d_iss >> input;
+    s_iss >> input;
                                     // Check if string represents a double.
     if (input.find_first_not_of("0123456789.") != string::npos)
         return false;
     double num = checkDoubleSmall(stod(input));
     *isInt = checkInt(num);
-    return checkModulus(num, d_op, isInt);
+    return checkModulus(num, s_op, isInt);
 }

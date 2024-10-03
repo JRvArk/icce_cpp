@@ -10,9 +10,9 @@ void Calculator::run()
     {
         if (input.empty())          // If no input, end calculations.
             break;
-        d_op = NONE;                // At start, set d_op to hold no operator.
-        d_iss.clear();
-        d_iss.str(input);
+        s_op = NONE;                // At start, set d_op to hold no operator.
+        s_iss.clear();
+        s_iss.str(input);
         if (expression())           // Evaluate whether input is correct.
             evaluate();
         cout << "? ";

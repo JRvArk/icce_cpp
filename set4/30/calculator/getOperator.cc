@@ -3,25 +3,25 @@
 bool const Calculator::getOperator()
 {
     string sign;
-    d_iss >> sign;                  // Extract the operator from d_iss.
+    s_iss >> sign;                  // Extract the operator from d_iss.
     if (sign.length() != 1)
         return false;
     switch (sign.front())
     {
         case ('+'):
-            d_op = PLUS;
+            s_op = PLUS;
             return true;
         case ('-'):
-            d_op = MINUS;
+            s_op = MINUS;
             return true;
         case ('*'):
-            d_op = TIMES;
+            s_op = TIMES;
             return true;
         case ('/'):
-            d_op = DIVIDE;
+            s_op = DIVIDE;
             return true;
         case ('%'):
-            d_op = MODULUS;
+            s_op = MODULUS;
             return true;
         default:
             return false;

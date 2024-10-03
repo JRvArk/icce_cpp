@@ -16,12 +16,12 @@ enum Operator
 
 class Calculator
 {
-    static std::istringstream d_iss;
-    static double d_num1;
-    static bool d_int1;
-    static enum Operator d_op;
-    static double d_num2;
-    static bool d_int2;
+    static std::istringstream s_iss;
+    static double s_num1;
+    static bool s_int1;
+    static enum Operator s_op;
+    static double s_num2;
+    static bool s_int2;
 
     public:
         static void run();
