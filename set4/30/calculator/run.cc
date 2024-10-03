@@ -14,7 +14,7 @@ void Calculator::run()
         s_iss.clear();
         s_iss.str(input);
         if (expression())           // Evaluate whether input is correct.
-            evaluate();
+            evaluate();             // Calculate and display the expression.
         cout << "? ";
     }
 }

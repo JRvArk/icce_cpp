@@ -18,5 +18,11 @@ bool const Calculator::expression()
         cout << "Third parameter has to be a number.\n";
         correct = false;
     }
+    if (!s_iss.eof())               // Expression should only have 3 parameters:
+    {                               // Number Operator Number.
+        cout << "No more than 3 parameters (formatted: num op num) should be "
+             << "given.\n";
+        correct = false;
+    }
     return correct;
 }

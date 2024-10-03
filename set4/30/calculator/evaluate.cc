@@ -3,7 +3,7 @@
 void Calculator::evaluate()
 {
     cout << ": ";
-    switch (s_op)
+    switch (s_op)                   // Make calculations.
     {
         case (PLUS):
             cout << s_num1 + s_num2;
