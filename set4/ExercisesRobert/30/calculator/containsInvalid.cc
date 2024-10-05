@@ -23,6 +23,7 @@ bool Calculator::containsInvalid()
                 return true;
             }
         
+        
         default:
             return false;
     }

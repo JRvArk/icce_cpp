@@ -17,10 +17,10 @@ void Calculator::evaluate()
                             % static_cast<int>(d_secondNr) << '\n';
                     break;
             case Operator::MULTIPLICATION:
-                cout << d_firstNr * d_secondNr << '/n';
+                cout << d_firstNr * d_secondNr << '\n';
                 break;
             case Operator::SUBTRACTION:
-                cout << d_firstNr - d_secondNr << '/n';
+                cout << d_firstNr - d_secondNr << '\n';
                 break;
             default:
                 usageMsg();

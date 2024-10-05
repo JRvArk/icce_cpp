@@ -2,7 +2,7 @@
 
 int main()
 {
-    Calculator calc;
+    Calculator calc{};
 
     calc.run();
 
