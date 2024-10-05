@@ -1,13 +1,10 @@
 #include "line.ih"
 
-#include <cctype>
-
-bool const Line::getLine() const
+bool Line::getLine()
 {
-    string line;
-    getline(cin, line);
-    for (char const c : line)       // Check every character in line.
-        if(isspace(c))              
-            return false;
-    return true;
+    d_pos = 0;            // reset position index upon reading a new line
+    getline(cin, d_currentLine);
+
+    return d_currentLine.find_first_of(" \t") != string::npos;
+
 }
