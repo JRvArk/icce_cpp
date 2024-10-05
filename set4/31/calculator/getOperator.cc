@@ -1,13 +1,5 @@
 #include "calculator.ih"
 
-namespace {                         // Check whether given number is an int and
-                                    // is non-negative .
-    bool checkNumModulus(double num, bool isInt)
-    {
-        return num >= 0 ? isInt : false;
-    }
-}
-
 bool const Calculator::getOperator()
 {
     string sign;
@@ -30,7 +22,7 @@ bool const Calculator::getOperator()
             return true;
         case ('%'):
             s_op = MODULUS;
-            return checkNumModulus(s_num1, s_int1);
+            return true;
         default:
             return false;
     }

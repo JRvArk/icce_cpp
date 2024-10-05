@@ -21,9 +21,7 @@ Third parameter has to be a number.
 ? 4 . 4
 Second parameter has to be an operator.
 ? 12 % -5
-    When using Modulus, both operands have to be non-negative integers.
-Third parameter has to be a number.
+When using modulus, ensure both operands are non-negative integrals.
 ? 2.5 % 1
-Second parameter has to be an operator.
-    When using Modulus, both operands have to be non-negative integers.
+When using modulus, ensure both operands are non-negative integrals.
 ?
