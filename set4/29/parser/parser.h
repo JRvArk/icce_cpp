@@ -1,7 +1,7 @@
 #ifndef PARSER_INCLUDED_
 #define PARSER_INCLUDED_
 
-#include "../../28/line/line.h"
+#include "../line.h"
 #include <string>
 
 class Parser
@@ -10,8 +10,8 @@ class Parser
     bool d_integral;
 
     public:                     
-        enum Return         // declared public so it can be used by
-        {                   // class calculator
+        enum Return                 // declared public so it can be used by
+        {                           // class calculator
             NO_NUMBER,
             NUMBER,
             EOLN

@@ -6,7 +6,7 @@ Parser::Return Parser::convert(double *dest, string const &str)
     {
         return pureDouble(dest, str) ? NUMBER : NO_NUMBER;
     }
-   catch (...)                                 // conversion failed
+   catch (...)                      // conversion failed
     {
         return NO_NUMBER;
     }

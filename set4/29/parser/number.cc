@@ -6,6 +6,6 @@ Parser::Return Parser::number(double *dest)
     if (subString.empty() == true) 
         return Parser::EOLN;
 
-    return convert(dest, subString); // return (NO_)NUMBER based on successful
-                                     // or failing conversion.
+    return convert(dest, subString);// Return (NO_)NUMBER based on successful
+                                    // or failing conversion.
 }
