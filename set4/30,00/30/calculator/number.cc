@@ -6,7 +6,7 @@
 bool const Calculator::number(double *dest, bool *isInt)
 {
     string input;
-    s_input_string >> input;
+    cin >> input;
     if (!isValidDouble(input))      // Check if string represents a double.
     {
         return false;

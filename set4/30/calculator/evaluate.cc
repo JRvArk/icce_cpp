@@ -2,26 +2,30 @@
 
 void Calculator::evaluate()
 {
-    cout << ": ";
-    switch (s_op)                   // Make calculations.
+    if(expression())
     {
-        case (PLUS):
-            cout << s_num1 + s_num2;
-            break;
-        case (MINUS):
-            cout << s_num1 - s_num2;
-            break;
-        case (TIMES):
-            cout << s_num1 * s_num2;
-            break;
-        case (DIVIDE):
-            cout << s_num1 / s_num2;
-            break;
-        case (MODULUS):
-            cout << static_cast<int>(s_num1) % static_cast<int>(s_num2);
-            break;
-        default:
-            cout << "Error.\n";     // Should not be reached.
+        switch(d_operator)
+        {
+            case Operator::ADDITION:
+                cout << d_firstNr + d_secondNr << '\n';
+                break;
+            case Operator::DIVISION:
+                cout << d_firstNr / d_secondNr << '\n';
+                break;
+            case Operator::MODULO:
+                    cout << static_cast<int>(d_firstNr) 
+                            % static_cast<int>(d_secondNr) << '\n';
+                    break;
+            case Operator::MULTIPLICATION:
+                cout << d_firstNr * d_secondNr << '\n';
+                break;
+            case Operator::SUBTRACTION:
+                cout << d_firstNr - d_secondNr << '\n';
+                break;
+            default:
+                errorMsg();
+        }
     }
-    cout << '\n';
+    else
+        errorMsg();
 }

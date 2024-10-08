@@ -1,8 +1,9 @@
 In this exercise, we create a Calculator class responsible for making simple
 calculations from the input evaluated from cin.
 
-This class also has no constructor. No constructor is needed since we do not
-need any instance of Calculator. We have a single static public function, run(),
-which can be called directly on the class itself with no need to create a
-Calculator object. Next to that, Calculator has no non-static data members that 
-work independently of class states.
+This class also has no constructor. This is because we just want to initialize a
+new calculator object, without having to initialize anything integral to the
+object. This way, the compiler automatically generates a default constructor 
+where the data members are unitialized. This does not matter in our case because
+run() will overwrite all data members, with run() being the only public member
+of Calculator.
