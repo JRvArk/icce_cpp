@@ -1,0 +1,27 @@
+The following is a small illustration of how correct calculations are done and
+how incorrect input is dealt with:
+
+? 13 + 15
+: 28
+? 15 - .5 
+: 14.5
+? -4 * 4
+: -16
+? 16.5 / 1.5
+: 11
+? 4e3 % 45
+: 40
+? 13+15
+First parameter has to be a number.
+Second parameter has to be an operator.
+Third parameter has to be a number.
+? abc - def
+First parameter has to be a number.
+Third parameter has to be a number.
+? 4 . 4
+Second parameter has to be an operator.
+? 12 % -5
+When using modulus, ensure both operands are non-negative integrals.
+? 2.5 % 1
+When using modulus, ensure both operands are non-negative integrals.
+?

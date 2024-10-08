@@ -1,0 +1,7 @@
+// AI: OK
+This example shows a simple class describing a bottle with a capacity, where
+water can be added or removed. The functions of Bottle are public, and the
+data members are private. 
+The implementation of the class is irrelevant to show encapsulation and data 
+hiding, as the interface provides controlled access and the implementation 
+remains hidden from the user.
