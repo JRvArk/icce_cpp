@@ -12,8 +12,10 @@ class Bottle
         double getCapacity() const;
         double getAmount() const;
         
-        void addWater(double capacity);
-        void removeWater(double amount);
+                                    // Add amount water to the bottle.
+        bool addWater(double amount);
+                                    // Remove amount water to the bottle.
+        bool removeWater(double amount);
 };
 
 #endif
