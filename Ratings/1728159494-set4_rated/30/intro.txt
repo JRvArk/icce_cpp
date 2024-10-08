@@ -1,0 +1,8 @@
+In this exercise, we create a Calculator class responsible for making simple
+calculations from the input evaluated from cin.
+
+This class also has no constructor. No constructor is needed since we do not
+need any instance of Calculator. We have a single static public function, run(),
+which can be called directly on the class itself with no need to create a
+Calculator object. Next to that, Calculator has no non-static data members that 
+work independently of class states.

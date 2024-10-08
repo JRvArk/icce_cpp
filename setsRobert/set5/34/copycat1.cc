@@ -3,4 +3,5 @@
 CopyCat::CopyCat()
 :
 
-{}
+{
+}

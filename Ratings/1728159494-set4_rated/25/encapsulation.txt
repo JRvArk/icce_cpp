@@ -1,0 +1,9 @@
+// AI: Data hiding explanation is OK
+// AI: But from you explanation it's not clear to me
+// AI: What encapsulation is/means
+// AI: You just mention encapsulation
+Data hiding describes that private data inside a specific section, or class, 
+cannot be modified or be seen by other sections. This can be done indirectly 
+using public member functions of the class implemented by the programmer. This 
+way, due to the encapsulation, the class is responsible for it's own data 
+integrity.

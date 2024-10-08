@@ -1,0 +1,50 @@
+// AI: OK
+// AI: 1
+Compiling and constructing the program on its own without precomiling the
+headers took 2:41.
+
+While using precompiled headers it took 0:46 to compile and construct the
+program. However, this increase in speed came at the cost of the space taken
+up by the precompiled headers :
+	Name 		Size (in MB)
+	uio		25.4
+	exception	31.3
+	string		34.8
+	mbuf    	36.6
+	mstream		38.9
+	main		41.1
+	keys		43.9
+	student		44.6
+	arg		48.3
+	datetime	50.9
+	students	51.6
+For a total combined of 436 MB taken up on the disk. 
+
+Using a single precompiled header (SPCH) the compilation and construction took
+2:42. This however, includes the compilation of the header so constructing
+the program again without having to recompile the beader would be a big time
+saver. The SPCH takes up about 54.8 MB on the disk, which is an order of
+magnitude less than having all the headers precompiled individually. 
+
+When doing the compilation using all the CPUs the user time shows 8:26 but the
+real time shows 0:38 to compile and construct the program once again including
+the compilation time of the headers.
+ 
+After deleting all the object, library and precompiled headers recompiling the
+program takes 0:02
+
+Depending on the on the situation different methods would be more appropriate. 
+Considering the size of precompiled headers, it makes most sense to use them
+in very large programs when compilation times become very long. 
+
+In a situation where the libraries in use are undergoing changes it makes
+sense to precompile them individually even though it takes up more disk space.
+Doing it this way means only the libraries that have been changed need to be 
+recompiled before constructing the program thus saving a consierable amount 
+of time.
+
+While in a situation where the libraries are mostly set, or are public and 
+very stable it makes sense to build a SPCH which cuts down significantly on 
+the amount of storage used by the file and saves time when building the 
+program. However if there were a change in one of the libraries the whole 
+header would have to be recompiled. 
