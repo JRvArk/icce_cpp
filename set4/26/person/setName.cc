@@ -1,4 +1,4 @@
-#include "../person.ih"
+#include "person.ih"
 
 void Person::setName(string const &name)
 {
@@ -6,4 +6,4 @@ void Person::setName(string const &name)
         cout << "A person must have a name.\n";
     else
         d_name = name;
-}
+};
