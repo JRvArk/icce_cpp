@@ -1,0 +1,2 @@
+The goal of this exercise is to compare different methods of precompiling headers when dealing
+with large projets with many source files. 
