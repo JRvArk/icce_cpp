@@ -1,36 +1,40 @@
-#ifndef INCLUDED_CALCULATOR_
-#define INCLUDED_CALCULATOR_
+#ifndef CALCULATOR_INCLUDED_
+#define CALCULATOR_INCLUDED_
 
+#include "../../29/parser/parser.h"  // why needed here but not for ex 29??
 #include <string>
-#include <sstream>
-
-enum Operator
-{
-    NONE,                           // No operator
-    PLUS,                           // +
-    MINUS,                          // -
-    TIMES,                          // *
-    DIVIDE,                         // /
-    MODULUS                         // %
-};
 
 class Calculator
 {
-    static std::istringstream s_iss;
-    static double s_num1;
-    static bool s_int1;
-    static enum Operator s_op;
-    static double s_num2;
-    static bool s_int2;
+    Parser d_parser; 
 
-    private:
-        static bool const number(double *dest, bool *isInt);
-        static bool const getOperator();
-        static bool const expression();
-        static void evaluate();
+    double d_firstNr = 0;
+    double d_secondNr = 0;
+    bool d_firstIsInt;
+    bool d_secondIsInt;
+    double ZERO_LIMIT = 1e-8;
+
+    enum Operator
+    {
+        ADDITION,
+        DIVISION,
+        MODULO,
+        MULTIPLICATION,
+        SUBTRACTION
+    };
+    Operator d_operator;
 
     public:
-        static void run();
+        void run();
+
+    private:
+        bool expression();
+        bool number(double *dest, bool *isInt);
+        bool getOperator();
+        void evaluate();
+        void usageMsg();
+        void errorMsg();
+        bool containsInvalid();
 };
-        
+
 #endif
