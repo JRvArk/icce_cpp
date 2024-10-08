@@ -1,7 +1,7 @@
 #include "program.ih"
 
-void writePersons(const vector<Person> &persons)
+void writePersons(const Person *persons, size_t amt)
 {
-    for (const auto &person : persons)
-        person.insert(cout);
+    for (size_t idx = 0; idx < amt; ++idx)
+        persons[idx].insert(cout);  // Write person at idx their data to cout.
 }
