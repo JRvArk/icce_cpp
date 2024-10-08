@@ -1,4 +1,3 @@
-// AI: 0
 #ifndef INCLUDED_PERSON_
 #define INCLUDED_PERSON_
 
