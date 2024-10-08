@@ -1,7 +1,4 @@
 #include "person.ih"
-#include <iostream>
-#include <sstream>
-
 
 void Person::extract(istream &is)
 {
@@ -14,4 +11,9 @@ void Person::extract(istream &is)
     getline(is, address, ',');
     getline(is, phone, ',');
     getline(is, mass);
+
+    setName(name);
+    setAddress(address);
+    setPhone(phone);
+    setMass(stoi(mass));
 }
