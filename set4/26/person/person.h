@@ -12,8 +12,10 @@ class Person
     size_t      d_mass;
 
     public:
-        Person() {};
-        Person(size_t mass) : d_mass(mass) {};
+        Person() : d_name("unknown"),
+                   d_address("unknown"),
+                   d_phone("unknown"),
+                   d_mass(0) {};
         Person(std::string const &name,
                std::string const &address,
                std::string const &phone,

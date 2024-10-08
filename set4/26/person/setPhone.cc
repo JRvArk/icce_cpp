@@ -1,4 +1,4 @@
-#include "../person.ih"
+#include "person.ih"
 
 void Person::setPhone(string const &phone)
 {
@@ -11,4 +11,4 @@ void Person::setPhone(string const &phone)
         cout << "Please provide a phone number only containing digits.\n";
         d_phone = "wrong input";
     }
-}
+};

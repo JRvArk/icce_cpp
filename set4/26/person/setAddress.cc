@@ -1,4 +1,4 @@
-#include "../person.ih"
+#include "person.ih"
 
 void Person::setAddress(string const &address)
 {
@@ -6,4 +6,4 @@ void Person::setAddress(string const &address)
         d_address = "unknown";
     else
         d_address = address;
-}
+};
