@@ -10,5 +10,5 @@ int main(int argc, char *argv[])
     
     Person people[numPeople];
     readPersons(people, numPeople);
-    writePersons(people);
+    writePersons(people, numPeople);
 }

@@ -6,6 +6,6 @@
 #include "../26/person/person.h"
 
 void readPersons(Person *persons, size_t amt);
-void writePersons(Person const *persons);
+void writePersons(Person const *persons, size_t amt);
 
 #endif
