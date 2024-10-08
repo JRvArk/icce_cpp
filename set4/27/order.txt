@@ -2,4 +2,6 @@ intro.txt
 
 program.h
 program.ih
+readPersons.cc
+writePersons.cc
 main.cc
