@@ -1,23 +1,5 @@
 intro.txt
 
+program.h
+program.ih
 main.cc
--person/frame
-
--person/person.h
--person/person.ih
-
--person/person1.cc
--person/person2.cc
-
--person/getters_setters/setName.cc
--person/getters_setters/setAddress.cc
--person/getters_setters/setPhone.cc
--person/getters_setters/setMass.cc
-
--person/getters_setters/name.cc
--person/getters_setters/address.cc
--person/getters_setters/phone.cc
--person/getters_setters/mass.cc
-
--person/insert.cc
--person/extract.cc

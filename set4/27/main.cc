@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
     else                            // Use predefined numPeople.
         numPeople = STD_NUM_PEOPLE; 
     
-    vector<Person> people;
+    Person people[numPeople];
     readPersons(people, numPeople);
     writePersons(people);
 }

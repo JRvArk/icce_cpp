@@ -3,7 +3,7 @@
 
 #include <vector>
 
-#include "person/person.h"
+#include "../26/person/person.h"
 
 void readPersons(std::vector<Person> &persons, size_t amt);
 void writePersons(std::vector<Person> const &persons);
