@@ -8,6 +8,3 @@ parser/next.cc
 parser/number.cc
 parser/puredouble.cc
 parser/reset.cc
-
--main.ih
--main.cc
