@@ -1,14 +1,5 @@
 intro.txt
 
--calculator/calculator.h
--calculator/calculator.ih
--calculator/data.cc
--calculator/number.cc
--calculator/getOperator.cc
--calculator/expression.cc
--calculator/evaluate.cc
--calculator/run.cc
-
 main.cc
 -Makefile
 

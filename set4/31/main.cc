@@ -1,6 +1,7 @@
-#include "calculator/calculator.h"
+#include "../30/calculator/calculator.h"
 
 int main()
 {
-    Calculator::run();
+    Calculator calculator;
+    calculator.run();
 }
