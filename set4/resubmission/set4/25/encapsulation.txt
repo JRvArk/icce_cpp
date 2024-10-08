@@ -1,0 +1,7 @@
+Encapsulation involves bundling data and functions operating on that data
+into a single unit, which is typically a class. This allows better management 
+and interaction with the data.
+Data hiding describes that private data inside a class cannot be modified or be 
+seen by sections outside the class. This can be done indirectly using public 
+member functions of the class implemented by the programmer. This way, due to 
+the encapsulation, the class is responsible for its own data integrity.
