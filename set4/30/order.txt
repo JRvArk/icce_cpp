@@ -7,7 +7,7 @@ calculator/calculator.ih
 calculator/run.cc
 calculator/expression.cc
 calculator/number.cc
-calculator/getOperator.cc
+calculator/getoperator.cc
 calculator/evaluate.cc
 calculator/usageMsg.cc
 calculator/errorMsg.cc

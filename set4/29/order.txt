@@ -1,5 +1,7 @@
 summary.txt
 
+line.h
+
 parser/parser.h
 parser/parser.ih
 parser/convert.cc

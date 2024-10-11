@@ -5,3 +5,5 @@ program.ih
 readPersons.cc
 writePersons.cc
 main.cc
+
+-Makefile

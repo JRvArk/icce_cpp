@@ -8,9 +8,9 @@ bool Calculator::number(double *dest, bool *isInt)
             *isInt = true;
         else
             *isInt = false;
-        return true;            // read substring is number and checked for int
+        return true;                // read substring is number and check int.
     }
     else
-        return false;           // if next read substring is not a number
+        return false;               // if next read substring is not a number.
 
 }

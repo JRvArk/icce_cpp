@@ -1,13 +1,13 @@
 intro.txt
 
+-Makefile
 -main.cc
 -person/frame
 
 person/person.h
 person/person.ih
 
-person/person1.cc
-person/person2.cc
+person/person.cc
 
 person/setName.cc
 person/setAddress.cc
