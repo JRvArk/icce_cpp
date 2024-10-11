@@ -1,6 +1,6 @@
 #include "data.ih"
 
-void Data::display() const
+void DataImpl::display() const
 {
     cout << "value is: " << d_value << '\n';
 }

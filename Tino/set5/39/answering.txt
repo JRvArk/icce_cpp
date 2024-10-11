@@ -6,9 +6,16 @@ Now we have created our library, which will be linked to main.o after compiling
 main.cc:
 g++ -std=c++26 -Wall -c main.cc
 g++ main.o -o main -L. -ldata
-When running the program using ./main.exe < data.in the following is displayed:
+When running the program using data.in, the following is displayed:
 Object 1: value is: 1
 Object 2: value is: 2
 Object 3: value is: 3
 Object 4: value is: 4
 
+After uncommenting the two lines in data.h and read.cc, and creating a new
+library using the first three commands again, we then link the newly made 
+library version to main.o using the last command mentioned. When trying to run
+the program we get a Segmentation fault (core dumped).
+
+Next up we make the two lines comments again, after which we change the class to
+use the pimpl principle.
