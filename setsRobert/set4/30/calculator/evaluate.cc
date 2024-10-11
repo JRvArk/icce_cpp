@@ -27,6 +27,4 @@ void Calculator::evaluate()
                 break;
         }
     }
-    else
-        usageMsg();
 }
