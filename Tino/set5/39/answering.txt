@@ -1,0 +1,14 @@
+Firstly we will create library libdata using the following commands:
+g++ -std=c++26 -Wall -c data\display.cc -o data\display.o
+g++ -std=c++26 -Wall -c data\read.cc -o data\read.o
+ar rcs libdata.a data\*.o
+Now we have created our library, which will be linked to main.o after compiling
+main.cc:
+g++ -std=c++26 -Wall -c main.cc
+g++ main.o -o main -L. -ldata
+When running the program using ./main.exe < data.in the following is displayed:
+Object 1: value is: 1
+Object 2: value is: 2
+Object 3: value is: 3
+Object 4: value is: 4
+
