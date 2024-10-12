@@ -10,6 +10,14 @@ class Data
 
     public:
         Data() : impl(std::make_unique<DataImpl>()) {};
+        bool read()
+        {
+            return impl->read();
+        }
+        void display()
+        {
+            impl->display();
+        }
 };
         
 #endif

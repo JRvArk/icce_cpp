@@ -1,3 +1,6 @@
+#ifndef INCLUDED_DATAIMPL_
+#define INCLUDED_DATAIMPL_
+
 #include <string>
 
 class DataImpl
@@ -9,3 +12,5 @@ class DataImpl
         bool read();
         void display() const; 
 };
+
+#endif
