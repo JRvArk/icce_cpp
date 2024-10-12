@@ -1,0 +1,10 @@
+#include "program.h"
+
+#include <iostream>
+
+using namespace std;
+
+enum
+{
+    STD_NUM_PEOPLE = 5
+};

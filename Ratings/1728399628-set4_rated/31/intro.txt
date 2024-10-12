@@ -1,0 +1,4 @@
+In this exercise, we use the Calculator class created in the previous assignment
+in a program and use it to perform some calculations. We also provide an example
+of how the program is used, so calculations and incorrect input handling are 
+shown.

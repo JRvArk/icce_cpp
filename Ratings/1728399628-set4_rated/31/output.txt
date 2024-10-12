@@ -1,0 +1,28 @@
+The following is a small illustration of how correct calculations are done and
+how incorrect input is dealt with:
+
+Usage: On prompt (? ), provide a number (integral or double), followed by a
+whitespace (space or tab) followed by the desired operator followed by yet
+another whitespace and then ending with the second integral or double number.
+Provide an empty line to quit the calculator.
+? 13 + 15
+28
+? 15 - .5
+14.5
+? -4 * 4
+-16
+? 16.5 / 1.5
+11
+? 4e3 % 45
+40
+? 13+15
+Provide a correct statement, see Usage info. 
+? 12 / 0
+error: division by 0
+Provide a correct statement, see Usage info. 
+? 12 % -5
+error: modulo with double number or negative number.
+Provide a correct statement, see Usage info. 
+? 4 % 0
+error: modulo 0
+Provide a correct statement, see Usage info. 

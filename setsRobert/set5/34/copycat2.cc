@@ -1,6 +1,7 @@
 #include "copycat.ih"
 
-CopyCat::CopyCat(int argc, char **argv)
+CopyCat::CopyCat(char **data)
 :
-
+    d_size{ nElements(data) },
+    d_data{ ntbsCopy(data) }
 {}
