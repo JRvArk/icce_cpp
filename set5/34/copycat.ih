@@ -1,0 +1,4 @@
+#include "copycat.h"
+#include <cstring>
+
+//using namespace std;
