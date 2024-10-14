@@ -1,8 +1,8 @@
 intro.txt
 
+data/data.ih
 data/data.h
-data/dataImpl.ih
-data/dataImpl.h
+dataImpl/dataImpl.h
 -data/read.cc
 -data/display.cc
 

@@ -1,4 +1,4 @@
-#include "charCount.ih"
+#include "charcount.ih"
 
 CharCount::CharInfo const CharCount::info()
 {

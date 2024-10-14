@@ -1,11 +1,11 @@
-#include "charCount.ih"
+#include "charcount.ih"
 
 void CharCount::count(istream &cin)
 {
     char ch;
-    while(cin.get(ch))      // get character from stdin
+    while(cin.get(ch))              // get character from stdin
     {
-        switch (locate(ch)) // choose Action according to locate
+        switch (locate(ch))         // choose Action according to locate
         {
         case APPEND:
             append(ch);

@@ -9,4 +9,6 @@ char **CopyCat::ntbsCopy(char const *const *input)
     {
         output[idx] = duplicate(input[idx]);
     }
+
+    return output;
 }
