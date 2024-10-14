@@ -10,6 +10,7 @@ class Data
 
     public:
         Data() : impl(std::make_unique<DataImpl>()) {};
+        ~Data() = default;
         bool read()
         {
             return impl->read();
