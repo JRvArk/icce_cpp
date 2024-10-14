@@ -2,19 +2,10 @@
 #define INCLUDED_DATA_
 
 #include <memory>
-#include <string>
+#include "../dataImpl/dataImpl.h"
 
 class Data
 {
-    class DataImpl
-    {
-        std::string d_text;
-        int d_value = 0;
-
-        public:
-            bool read();
-            void display() const; 
-    };
     std::unique_ptr<DataImpl> impl;
 
     public:
