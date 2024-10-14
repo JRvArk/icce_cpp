@@ -1,4 +1,4 @@
-#include "dataImpl.ih"
+#include "data.ih"
 
 void DataImpl::display() const
 {
