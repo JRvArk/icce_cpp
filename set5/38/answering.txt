@@ -1,0 +1,15 @@
+• What is the design flaw in the code?
+    Since s_finder is a static member instance of PhoneBook, it will be 
+    initialized when PhoneBook is accessed for the first time. But the order in
+    which PhoneBook and Finder are initialized is undefined, as they are in
+    separate source files. Thus initialization of s_finder is not guaranteed 
+    when PhoneBook tries to use member functions.
+• How can this flaw be repaired?
+    There are several ways to fix this. One way is to make PhoneBook static and
+    making Finder non-static. As PhoneBook is a global instance of which we need
+    only 1 this would make sense to do. With PhoneBook being static and having
+    only one instance, we also have one finder instance.
+    With finder not being a static member of PhoneBook, initialization of finder
+    is not done when PhoneBook is first accessed, but when the PhoneBook 
+    instance is created. This way, it is ensured finder exists before it's 
+    member functions are used and thus the order of source files is irrelevant.
