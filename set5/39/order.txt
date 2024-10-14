@@ -1,0 +1,16 @@
+intro.txt
+
+data/data.h
+data/dataImpl.ih
+data/dataImpl.h
+-data/read.cc
+-data/display.cc
+
+-data/frame
+-main.ih
+-main.cc
+-CLASSES
+-data.in
+-icmconf
+
+answering.txt
