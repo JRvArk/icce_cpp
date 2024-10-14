@@ -18,4 +18,7 @@ library version to main.o using the last command mentioned. When trying to run
 the program we get a Segmentation fault (core dumped).
 
 Next up we make the two lines comments again, after which we change the class to
-use the pimpl principle.
+use the pimpl principle. Class Data is changed into DataImpl, and then the new
+class Data will have a pointer to a new Data instance as the only data member.
+If we repeat the process again, now we do not get a Segmentation fault, but the
+code displays the same as before uncommenting changes are made.

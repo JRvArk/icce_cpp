@@ -2,7 +2,7 @@
 #define INCLUDED_DATA_
 
 #include <memory>
-#include "dataImpl.h"
+#include "dataImpl.ih"
 
 class Data
 {
@@ -14,7 +14,7 @@ class Data
         {
             return impl->read();
         }
-        void display()
+        void display() const
         {
             impl->display();
         }

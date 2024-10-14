@@ -5,7 +5,7 @@
 
 class DataImpl
 {
-    // std::string d_text;
+    std::string d_text;
     int d_value = 0;
 
     public:
