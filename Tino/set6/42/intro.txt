@@ -1,0 +1,1 @@
+In this exercise we explore different versions of new and delete.
