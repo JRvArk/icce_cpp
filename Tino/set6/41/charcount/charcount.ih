@@ -3,6 +3,6 @@
 
 enum {
     INIT_CAP = 8
-}
+};
 
 using namespace std;
