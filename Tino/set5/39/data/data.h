@@ -2,7 +2,7 @@
 #define INCLUDED_DATA_
 
 #include <memory>
-#include "dataImpl.h"
+#include "dataImpl.ih"
 
 class Data
 {
@@ -10,11 +10,12 @@ class Data
 
     public:
         Data() : impl(std::make_unique<DataImpl>()) {};
+        ~Data() = default;
         bool read()
         {
             return impl->read();
         }
-        void display()
+        void display() const
         {
             impl->display();
         }

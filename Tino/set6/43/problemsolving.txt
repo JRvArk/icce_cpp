@@ -1,0 +1,30 @@
+ • Problems and solutions for String:
+    A very large issue with the implementation of the String class is the fact 
+    that there are memory leaks. This is mainly because String does not have a 
+    destructor that can free up allocated memory. By adding one (file 
+    destructor.cc) we can fix this problem.
+    Another thing that is fixed is the efficiency of enlarge. At first memory is
+    allocated for one more string object at a time, which can become very
+    inefficient for large files. By doubling the size at each time this is
+    fixed.
+
+ • String's interface has two at members.
+    - Why?
+        A String could be declared as a const or not. By having two versions of
+        at, one for const strings that cannot be modified, and one for strings
+        that can be modified, we ensure the function can be used in both
+        contexts.
+    - Which version is used in main?
+        In main, strings is declared as a non-const Strings object. Therefore,
+        the non-const version is used.
+    - A small example where the other one is used:
+        The following code snippet is the same as the given main function, where
+        we change strings to be const, forcing the other at-member to be used:
+
+        int main()
+        {
+            Strings const strings{ cin };
+
+            for (size_t idx = 0, end = strings.size(); idx != end; ++idx)
+                cout << "line " << idx + 1 << ": " << strings.at(idx) << '\n';
+        }

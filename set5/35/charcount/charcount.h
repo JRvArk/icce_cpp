@@ -6,7 +6,7 @@
 
 struct CharCount
 {
-    enum Action                         // enum to decide action
+    enum Action                     // enum to decide action
     { 
         APPEND,
         INC,
@@ -15,14 +15,14 @@ struct CharCount
 
     struct Char
     {
-        char ch;                        // the character itself
-        size_t count;                   // amount of occurences of char
+        char ch;                    // the character itself
+        size_t count;               // amount of occurences of char
     };
 
-    struct CharInfo                     // char frequency of all chars
+    struct CharInfo                 // char frequency of all chars
     {
-        Char *charPtr = 0;              // points to Char objects
-        size_t nCharObj = 0;            // number of Char objects stored
+        Char *charPtr = 0;          // points to Char objects
+        size_t nCharObj = 0;        // number of Char objects stored
     };
 
     CharInfo d_charInfo;
