@@ -10,4 +10,6 @@ int main()
     CharCount::CharInfo const info = charCount.info();
     for (size_t idx = 0; idx != info.nCharObj; ++idx)
         showChar(info.charPtr[idx]);
+    
+    cout << "Capacity: " << charCount.capacity() << '\n';
 }
