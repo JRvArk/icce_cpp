@@ -1,0 +1,11 @@
+#include "symbol.ih"
+
+Symbol::Compare Symbol::compareNames(string const &other) const
+{
+    if (d_name < other)
+        return LHS_FIRST;
+    else if (d_name > other)
+        return RHS_FIRST;
+    else
+        return EQUAL;
+}

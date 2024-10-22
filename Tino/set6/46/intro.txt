@@ -1,0 +1,3 @@
+In this assignment we design some classes that help with lexicographically
+ordering symbols, where we enter symbols and order them but without adding
+symbols already present.

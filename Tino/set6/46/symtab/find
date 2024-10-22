@@ -1,0 +1,6 @@
+#include "symtab.ih"
+
+Symbol& const Symtab::find(string const &name) const
+{
+
+}
