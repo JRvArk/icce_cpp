@@ -2,7 +2,7 @@
 
 void CharCount::count(istream &cin)
 {
-    void (CharCount::*actionFunctionPointers[])(Char ch) = 
+    void (CharCount::*actionFunctionPointers[])(char ch) = 
     {
         &CharCount::append,
         &CharCount::insert,
