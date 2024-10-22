@@ -1,0 +1,8 @@
+#include "charcount.h"
+#include <iostream>
+
+enum {
+    INIT_CAP = 8
+}
+
+using namespace std;
