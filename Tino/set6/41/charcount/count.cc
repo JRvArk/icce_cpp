@@ -5,8 +5,8 @@ void CharCount::count(istream &cin)
     void (CharCount::*actionFunctionPointers[])(char ch) = 
     {
         &CharCount::append,
-        &CharCount::insert,
         &CharCount::increment
+        &CharCount::insert,
     };
 
     char ch;
