@@ -1,0 +1,26 @@
+// ES: ?
+Firstly we will create library libdata using the following commands:
+g++ -std=c++26 -Wall -c data/display.cc -o data/display.o
+g++ -std=c++26 -Wall -c data/read.cc -o data/read.o
+ar rcs libdata.a data/*.o
+Now we have created our library, which will be linked to main.o after compiling
+main.cc:
+g++ -std=c++26 -Wall -c main.cc
+g++ main.o -o main -L. -ldata
+When running the program using data.in, the following is displayed:
+Object 1: value is: 1
+Object 2: value is: 2
+Object 3: value is: 3
+Object 4: value is: 4
+
+After uncommenting the two lines in data.h and read.cc, and creating a new
+library using the first three commands again, we then link the newly made 
+library version to main.o using the last command mentioned. When trying to run
+the program we get a Segmentation fault (core dumped).
+
+Next up we make the two lines comments again, after which we change the class to
+use the pimpl principle. Class Data is changed into DataImpl, and then the new
+class Data will have a pointer to a new Data instance as the only data member.
+If we repeat the process again, now we do not get a Segmentation fault, but the
+code displays the same as before uncommenting changes are made and the program
+executes correctly.

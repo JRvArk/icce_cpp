@@ -1,0 +1,14 @@
+summary.txt
+
+charcount/charcount.ih
+charcount/charcount.h
+charcount/count.cc
+charcount/info.cc
+charcount/locate.cc
+charcount/append.cc
+charcount/increment.cc
+charcount/insert.cc
+
+main.ih
+showchar.cc 
+main.cc

@@ -1,0 +1,21 @@
+// ES: 1
+• Why does the program break after introducing the new library?
+    The new library has an implementation of Data with a new data member (and
+    it's use) introduced: d_string. The ABI of Data is changed, while main is 
+    compiled with the old library. Because of this, the program breaks when 
+    linked to the new library.
+• Why does the program not break using pImpl?
+    Using pImpl, Data contains only a pointer to a DataImpl instance. This way,
+    the ABI of DataImpl can change (by adding d_string), without the ABI of Data
+    changing. This way, the program still runs after linking to the new library.
+• Changing a class made without pImpl:
+    We can use a combination of versioning and inheritance to make this work.
+    Firstly, the class will remain unchanged, but we do need to ensure that it
+    has a destructor and versioning. The versioning is done by having a static
+    version() function returning a 1.
+    Then a new class can be made with the two extra data members, which inherits
+    the first class. This function also has the same version() function that
+    now returns 2.
+    Lastly we need a function that returns the instance of the correct class. It
+    takes a version number and returns a pointer to a new instance of the first
+    class, which is the original class or the new class depending on version.
