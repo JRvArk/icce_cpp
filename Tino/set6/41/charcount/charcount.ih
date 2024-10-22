@@ -2,7 +2,7 @@
 #include <iostream>
 
 enum {
-    INIT_CAP = 8
+    INIT_CAP = 8                    // Start with capacity of 8.
 };
 
 using namespace std;
