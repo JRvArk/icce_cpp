@@ -1,0 +1,2 @@
+Purpose of this exercise: Learn to store an (apriori unknown) number of 
+data elements in a class.

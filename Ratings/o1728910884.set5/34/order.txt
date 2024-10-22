@@ -1,0 +1,8 @@
+intro.txt
+copycat.ih
+copycat.h
+copycat1.cc
+copycat2.cc
+-duplicate.cc
+-nelements.cc
+-ntbscopy.cc

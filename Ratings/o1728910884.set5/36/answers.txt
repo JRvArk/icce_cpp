@@ -1,0 +1,78 @@
+// ES: 1
+Complete the table below, by entering the empty fields of the `pointers' and
+`semantics' columns. The index-expressions should be rewritten without using
+the index-operator []. In all cases you have to use pointer notations.
+
+----------------------------------------------------------------------------
+  definition:         rewrite: 
+----------------------------------------------------------------------------
+  int x[8];           x[2] = x[3];
+
+pointer notation:     *(x + 2) = *(x + 3)       
+       semantics:     x + 2 and x + 3 points to the location of the 2nd and 3rd
+                      int beyond x respectively. the elements are both
+                      dereferenced so that the content of 3rd int beyond x
+                      is assigned to the second int beyond x
+----------------------------------------------------------------------------
+  char *argv[8];      cout << argv[2];
+
+pointer notation:     cout << *(argv + 2);
+       semantics:     argv + 2 points to the location of the 2nd char *
+                      beyond x, it is dereferenced using '*" and sent to
+                      the output stream
+----------------------------------------------------------------------------
+  int x[8];           &x[10] - &x[3];
+ 
+pointer notation:     &*(x + 10) - &*(x + 3)
+       semantics:     x + 10 and x + 3 point to the location of the 10th and 
+                      3rd int beyond x respectively. it is dereferenced using
+                      '*' to reach the value of the element but then the 
+                      location is again referenced using the '&' operator.
+                      Then the locations are subtracted from eachother to reach
+                      &*(x + 10) - &*(x +3) == (x + 10) - (x + 3) == 7
+----------------------------------------------------------------------------
+  main's argv;        argv++[0];
+
+pointer notation:     *argv++    
+       semantics:     In the given statement, argv is first incremented and
+                      then the 0th index is retrieved. This was the 1th
+                      index before argv was incremented. This is a result from
+                      the memory address that argv holds being incremented by 1.
+                      The increment operator has precedence over the deference
+                      operator. Hence, we increment argv in pointer notation
+                      and then dereference it.
+----------------------------------------------------------------------------
+  main's argv;        argv[0]++;
+
+pointer notation:     (*argv)++
+       semantics:     In the given statement, the value at the 0th index is
+                      retrieved and then it's incremented by one. This is
+                      equivalent to derefencing the memory address and
+                      incrementing by one (after using it as it is a postfix).
+----------------------------------------------------------------------------
+  main's argv;        ++argv[0];
+
+pointer notation:     ++*argv
+       semantics:     In the given statement, the index operator has precedence
+                      over the prefix increment operator. Hence, the value at
+                      the 0th index is retrieved, incremented by 1, and then
+                      used. In pointer notation, it is equivalent when there
+                      is first an increment operator immediately following the
+                      derefencing operator and the array name. In that case
+                      the dereferencing is done first.
+----------------------------------------------------------------------------
+  main's argv;        ++argv[0][2];
+
+pointer notation:     ++*(*argv + 2)
+       semantics:     In the given statement, again the index operators have
+                      precedence. Argv is an array of pointers to pointers.
+                      First, the 0th pointer is accessed and dereferenced, 
+                      after which the third value of the pointed to array is 
+                      accessed. This is then incremented by one before it is
+                      used. In pointer notation this is done by first
+                      derefencing the arrays name, obtaining the memory address
+                      of the first element that is pointed to by the obtained
+                      pointer. Then, two is added obtaining the address of the 
+                      third element of that character array. Lastly, this is 
+                      incremented before use.
+----------------------------------------------------------------------------
