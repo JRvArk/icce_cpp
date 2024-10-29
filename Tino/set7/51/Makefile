@@ -4,7 +4,7 @@ CXXFLAGS = --std=c++26 -Wall
 CXX_LIBSOURCES_UTILITY = $(shell find utility -type f -name \*.cc)
 CXX_LIBOBJS_UTILITY = $(patsubst %.cc, %.o, $(CXX_LIBSOURCES_UTILITY))
 
-main: main.o showchar libutility.a
+main: main.o libutility.a
 	$(CXX) $(CXXFLAGS) main.o -L. -lutility -o main
 
 $(CXX_LIBOBJS_UTILITY) : %.o : %.cc

@@ -15,6 +15,5 @@ int main(int argc, char **argv)
         return 1;
     }
     
-    string name = argv[1];
-    convert(name);
+    convert(argv[1]);
 }
