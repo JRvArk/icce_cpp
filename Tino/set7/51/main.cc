@@ -1,5 +1,7 @@
 #include "main.ih"
 
+#include "utility/utility.h"
+
 enum
 {
     EXPECTED_ARGS = 1               // Num of given arguments expected.
