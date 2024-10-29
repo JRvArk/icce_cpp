@@ -68,7 +68,9 @@
         "regex": "cpp",
         "variant": "cpp",
         "xlocbuf": "cpp",
-        "xiosbase": "cpp"
+        "xiosbase": "cpp",
+        "xlocale": "cpp",
+        "fstream": "cpp"
     },
     "C_Cpp.default.compilerPath": "C:\\msys64\\mingw64\\bin\\g++.exe"
 }
