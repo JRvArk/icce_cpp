@@ -8,5 +8,3 @@ main.ih
 main.cc
 
 -Makefile
--input
--input.org
