@@ -2,19 +2,19 @@ The program is executed with and without if-statement.
 
 • Time using the if-statement:
     +------+-----------+
-    | real |  0m9.990s |
+    | real | 0m0.422s |
     +------+-----------+
-    | user |  0m9.566s |
+    | user | 0m0.337s |
     +------+-----------+
-    |  sys |  0m0.303s |
+    |  sys | 0m0.059s |
     +------+-----------+
 • Time without the if-statement:
     +------+-----------+
-    | real | 0m12.678s |
+    | real | 0m3.718s |
     +------+-----------+
-    | user | 0m12.440s |
+    | user | 0m2.926s |
     +------+-----------+
-    |  sys |  0m0.126s |
+    |  sys | 0m0.726s |
     +------+-----------+
 
 The difference in execution time can be explained with the overhead caused by

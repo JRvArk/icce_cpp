@@ -18,7 +18,8 @@ int main(size_t argc, char **argv)
 
     out.setstate(ios::failbit);     // Set out's state to fail state.
 
-    for (size_t idx = 0; idx != stoull(argv[1]); ++idx)
+    size_t amt = stoull(argv[1]);
+    for (size_t idx = 0; idx != amt; ++idx)
     {
         if (out.good())             // Check if out is ready for IO.
                                     // Since out's in failstate, this remains 0.
