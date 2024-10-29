@@ -70,7 +70,8 @@
         "xlocbuf": "cpp",
         "xiosbase": "cpp",
         "xlocale": "cpp",
-        "fstream": "cpp"
+        "fstream": "cpp",
+        "xstring": "cpp"
     },
     "C_Cpp.default.compilerPath": "C:\\msys64\\mingw64\\bin\\g++.exe"
 }
