@@ -1,0 +1,26 @@
+The program is executed with and without if-statement.
+
+• Time using the if-statement:
+    +------+-----------+
+    | real |  0m9.990s |
+    +------+-----------+
+    | user |  0m9.566s |
+    +------+-----------+
+    |  sys |  0m0.303s |
+    +------+-----------+
+• Time without the if-statement:
+    +------+-----------+
+    | real | 0m12.678s |
+    +------+-----------+
+    | user | 0m12.440s |
+    +------+-----------+
+    |  sys |  0m0.126s |
+    +------+-----------+
+
+The difference in execution time can be explained with the overhead caused by
+the insertion operator. When we set the state to failbit, the insertion operator
+is never used when we have the if-statement. This results in lower runtimes than
+compared to when we do use the if-statement.
+
+We can formulate a general rule of thumb from this; when execution time is
+important, then explicit failbit checks should be used.
