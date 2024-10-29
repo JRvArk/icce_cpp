@@ -3,8 +3,6 @@
 #include <fstream>
 #include <ios>
 
-
-
 void convert(const string &name) {
                                     // Open file for reading and writing.
     fstream file{ name, ios::out || ios::in };
