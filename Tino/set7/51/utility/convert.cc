@@ -16,10 +16,13 @@ void convert(const string &name) {
     file.seekg(0);                  // Set read pointer to start.
     string output;                  // Will hold (modified) content.
     string line;
+    bool firstLine = true;
     while (getline(file, line))
     {                               // Check if line is email line.
-        if (file.tellg() != 0)
-            output += "\n";         // Append newline after every line.
+        if (!firstLine)             // Append newline after every line..
+            output += "\n";
+        else                        // ..except first line.
+            firstLine = false;
         if (line.substr(0, 7) == "email: ")
             line = lowercase(line);
         output += line;
