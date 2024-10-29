@@ -10,7 +10,9 @@ enum
 int main(int argc, char **argv)
 {
     if (argc != EXPECTED_ARGS)
-        cout << "Give 1 argument: the name of a student file.\n";
+        cout << "Usage: ./main <filename>\n";
+        return 1;
 
-    convert(argv[1]);
+    string name = argv[1];
+    convert(name);
 }
