@@ -1,0 +1,2 @@
+In this assignment we look at the flawed Strings class. We fix the problems
+encountered in it and explain why it was wrong and how it is solved.

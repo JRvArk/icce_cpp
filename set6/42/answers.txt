@@ -1,0 +1,55 @@
+1. new and delete
+    We can use new and delete just like in the following code lines:
+    
+    int *num = new int;
+    delete num;
+    
+    Firstly, we allocate memory for an int, of which the address is assigned.
+    Then the memory is deallocated for the int object.
+
+2. new[] and delete[]
+    new[] and delete[] can be used to dynamically allocate memory for arrays:
+    
+    size_t *arr = new size_t[8];
+    delete[] arr;
+    
+    First, we allocate memory for an array of 8 size_t objects. This allocates
+    memory for 8 size_t objects in a row, and arr will point at the location of
+    the first object. Then the memory is deallocated using delete[].
+
+3. operator new and delete
+    Look at the following code snippet:
+    
+    Person *person = static_cast<Person *>(operator new(sizeof(Person)));
+    operator delete(person);
+    
+    Operator new allocates raw memory the size of the Person class. The default
+    constructor of Person is not called, which is what new does. Thus the object
+    is uninitialized. Next, operator delete returns the allocated memory.
+
+4. operator new[] and delete[]
+    size_t num = 5;
+    Person *queue = static_cast<Person *>(operator new[](sizeof(Person) * num));
+    operator delete[] queue;
+
+    We allocate a block of raw memory the size of num(5) Person objects. Again,
+    the objects are uninitialized as the default constructor of Person is not
+    called. Next, operator delete[] returns the allocated block of memory to the
+    common pool.
+    
+
+5. placement new
+    We can pre-allocate memory and place objects at that location when we need 
+    to using placement new:
+    
+    void *buffer = operator new(sizeof(Person));
+    Person *object = new(buffer) Person;
+    object->~Person();
+    operator delete(buffer);
+    
+    In the example, at first we reserve raw memory that can hold a Person
+    instance, and return the location of that memory. Then, placement new is 
+    used to construct a Person object at the location in buffer. Next, the 
+    destructor is called, which is necessary as memory management is done
+    separately from the construction/destruction of the object. The final line
+    frees the raw memory that was allocated at the location at buffer.

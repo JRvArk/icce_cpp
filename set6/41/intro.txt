@@ -1,0 +1,3 @@
+In this assignment we improve on the previously made CharCount class by making
+the memory allocation scheme more efficient. Next to that, we implement an array
+of pointers to members to determine that determines what functions to call.
