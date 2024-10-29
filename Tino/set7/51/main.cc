@@ -9,11 +9,11 @@ enum
 
 int main(int argc, char **argv)
 {
-    if (argc != EXPECTED_ARGS)
+    if (argc != EXPECTED_ARGS + 1)
     {
         cout << "Usage: ./main <filename>\n";
         return 1;
     }
     
-    convert(argv[1]);
+    convert(argv[EXPECTED_ARGS]);
 }
