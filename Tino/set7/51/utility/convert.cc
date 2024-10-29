@@ -23,6 +23,7 @@ void convert(const string &name) {
             output += "\n";
         else                        // ..except first line.
             firstLine = false;
+        
         if (line.substr(0, 7) == "email: ")
             line = lowercase(line);
         output += line;
