@@ -1,0 +1,17 @@
+When considering the given program, we want to use:
+• ofstream to create /tmp/out1, and 
+•  fstream to create /tmp/out2.
+
+Fstream and ofstream are both file streams. The difference between them is the
+fact that ofstream is an output file stream, hence the o. 
+
+Ofstream is for outputting to files while fstream is used for both reading 
+and writing.
+Fstream can be used for both input and output. When no mode is set for fstream,
+it is opened in input mode by default.
+
+Because of this, we cannot write using fstream. This can be fixed by setting the
+mode of fstream by adding ios::out as parameter to get the following:
+    fstream out2( "/tmp/out2", ios::out );
+This way fstream opens in write mode, and hello(out2) will do the same as
+hello(out1) for each corresponding file.

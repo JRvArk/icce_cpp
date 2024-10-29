@@ -1,0 +1,2 @@
+In this assignment we will work with manipulators and create one called 'now',
+and use it to insert asctime into cout without the newline character.
