@@ -6,7 +6,7 @@
 
 void convert(const string &name) {
                                     // Open file for reading and writing.
-    fstream file{ name, ios::out || ios::in };
+    fstream file(name, ios::out || ios::in);
 
     if (!file.is_open()) {          // Check if file is opened.
         cout << "Failed to open file.\n";
