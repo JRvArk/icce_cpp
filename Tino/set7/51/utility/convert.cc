@@ -18,9 +18,11 @@ void convert(const string &name) {
     string line;
     while (getline(file, line))
     {                               // Check if line is email line.
+        if (file.tellg() != 0)
+            output += "\n";         // Append newline after every line.
         if (line.substr(0, 7) == "email: ")
             line = lowercase(line);
-        output += line + "\n";
+        output += line;
     }
 
     file.clear();                   // Clear state.
