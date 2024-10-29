@@ -2,7 +2,8 @@
 #include <ostream>
 #include <ios>
 
-enum {
+enum
+{
     EXPECTED_ARGS = 1               // Num of given arguments expected.
 };
 
