@@ -6,13 +6,14 @@
 
 void convert(const string &name) {
                                     // Open file for reading and writing.
-    fstream file(name, ios::out | ios::in);
+    fstream file(name, ios::out | ios::in | ios::ate);
 
     if (!file.is_open()) {          // Check if file is opened.
         cout << "Failed to open file.\n";
         return;
     }
 
+    file.seekg(0);                  // Set read pointer to start.
     string output;                  // Will hold (modified) content.
     string line;
     while (getline(file, line))
@@ -22,7 +23,8 @@ void convert(const string &name) {
         output += line + "\n";
     }
 
+    file.clear();                   // Clear state.
     file.seekp(0);                  // Rewrite file from start.
     file << output;                 // Replace file content with output.
-    file.close();                   // Close file stream
+    file.close();                   // Close file stream.
 }
