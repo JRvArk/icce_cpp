@@ -18,5 +18,5 @@ int main()
          << "4-digit fraction    \"" 
          << setw(15) << setprecision(4) << value << "\"\n"
          << "std display         \"" 
-         << setw(15) << resetioflags(cout.flags()) << value << "\"\n";
+         << setw(15) << resetiosflags(cout.flags()) << value << "\"\n";
 }
