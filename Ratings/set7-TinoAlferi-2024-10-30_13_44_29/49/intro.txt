@@ -1,0 +1,2 @@
+The purpose of this assignment is to find out how to prevent output from being
+written using failbit, and to get to know the overhead of <<.

@@ -1,0 +1,2 @@
+In this assignment we will display a floating point number with different
+formatting using modifiers from the iomanip library.
