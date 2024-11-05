@@ -1,0 +1,2 @@
+Purpose of this exercise: learn to recognize situations where copy
+elision may be active. 
