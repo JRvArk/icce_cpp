@@ -1,1 +1,0 @@
-Design a small class Line returning substrings from lines.

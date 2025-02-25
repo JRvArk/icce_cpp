@@ -1,6 +1,0 @@
-#include "charCount/charCount.h"
-#include <iostream>
-
-using namespace std;
-
-void showChar(CharCount::Char charObj);
